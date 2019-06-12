@@ -6,6 +6,7 @@ class GRAPH{
     private int maxAnz;
     private int anz;
     private String standort;
+    private boolean raetselAktiv;
     
     GRAPH(){
      maxAnz = 5;
@@ -80,7 +81,8 @@ class GRAPH{
             if(knotenliste[i].gibInhalt().gibKuerzel() == kuerzel){
                 standortGesetzt = true;
                 ausgabe = "Standort auf '" + kuerzel + "' gesetzt!";
-                standort = knotenliste[i].gibInhalt().gibBezeichnung();   
+                standort = knotenliste[i].gibInhalt().gibKuerzel();
+                raetselAktiv = knotenliste[i].gibInhalt().gibRaetselAktiv();
             } else {
                 i++;
             }
@@ -90,6 +92,18 @@ class GRAPH{
     
     String gibStandort(){
         return standort;
+    }
+    
+    void RaetselAktivSetzen() {
+    	knotenliste[suchIndex(standort)].gibInhalt().RaetselTrue();
+    }
+    
+    void RaetselInaktivSetzen() {
+    	knotenliste[suchIndex(standort)].gibInhalt().RaetselFalse();
+    }
+    
+    boolean gibRaetselAktiv() {
+    	return raetselAktiv;
     }
     
     

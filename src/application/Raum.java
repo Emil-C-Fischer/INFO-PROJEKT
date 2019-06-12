@@ -30,8 +30,12 @@ class RAUM extends DE{
     	return raetselAktiv;
     }
     
-    void RaetselAktivSetzen() {
+    void RaetselTrue() {
     	raetselAktiv = true;
+    }
+    
+    void RaetselFalse() {
+    	raetselAktiv = false;
     }
     
     boolean standortSetzen(boolean b){

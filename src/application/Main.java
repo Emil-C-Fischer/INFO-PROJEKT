@@ -7,6 +7,7 @@ import javafx.application.Application;
 import javafx.stage.Stage;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
@@ -47,16 +48,35 @@ public class Main extends Application {
         primaryStage.show();
     	
         //Control panel
-        TextField tf1 = new TextField();
-        tf1.setLayoutX(384);
-        tf1.setLayoutY(800);
-        tf1.setPrefWidth(1300);
         Button tfb = new Button();
         tfb.setText("---abschicken---");
         tfb.setLayoutX(1715);
         tfb.setLayoutY(800);
-        root.getChildren().add(tf1);
         root.getChildren().add(tfb);
+         
+        Label label1 = new Label();
+        label1.setLayoutX(387);
+        label1.setLayoutY(800);
+        label1.setText("---");
+        root.getChildren().add(label1);
+        
+        TextField tf1 = new TextField();
+        tf1.setLayoutX(550);
+        tf1.setLayoutY(800);
+        tf1.setPrefWidth(473);
+        root.getChildren().add(tf1);
+        
+        Label label2 = new Label();
+        label2.setLayoutX(1050);
+        label2.setLayoutY(800);
+        label2.setText("---");
+        root.getChildren().add(label2);
+        
+        TextField tf2 = new TextField();
+        tf2.setLayoutX(1186);
+        tf2.setLayoutY(800);
+        tf2.setPrefWidth(473);
+        root.getChildren().add(tf2);
         
         //textfield:story
         TextArea storyta = new TextArea();
@@ -64,6 +84,7 @@ public class Main extends Application {
         storyta.setPrefHeight(540);
         storyta.setPrefWidth(374);
         storyta.setWrapText(true);
+        storyta.setEditable(false);
         root.getChildren().add(storyta);
 
         //Picture declaration--------
@@ -82,30 +103,18 @@ public class Main extends Application {
         Image Raum3 = new Image("/raum/r3.jpg");
         Image Raum4 = new Image("/raum/r4.jpg");
         Image Raum5 = new Image("/raum/r5.jpg");
-        //textext
-        /*
-        Image testtext = new Image("/text/testtext.jpg");
-        Image spielbeginnt = new Image("/text/spiel-beginnt.jpg");
-		*/
-        //picture fields
+
+        //Imageviewer RAUM
         ImageView raum = new ImageView();
         raum.setImage(Raum1);
         raum.setLayoutX(384);
         root.getChildren().add(raum);
         raum.setFitWidth(1496);
 
+        //ImageViewer MINIMAP
         ImageView minimap = new ImageView();
         minimap.setImage(minimap1);
         root.getChildren().add(minimap);
-        
-        /*
-        ImageView textfield = new ImageView();
-        textfield.setImage(testtext);
-        root.getChildren().add(textfield);
-        textfield.setLayoutY(384);
-		*/
-        
-
         
         //Buttons
         Button btn1 = new Button();
@@ -114,7 +123,6 @@ public class Main extends Application {
         btn1.setLayoutY(850);
         btn1.setPrefHeight(70);
         btn1.setPrefWidth(200);
-
 
         Button btn2 = new Button();
         btn2.setText("---");
@@ -135,41 +143,56 @@ public class Main extends Application {
         root.getChildren().add(btn3);
         
         //------------------SPIELLOGIK------------------//
+        
+        btn1.setText("START");
+        storyta.setText("vorstory");
+        
         btn1.setOnAction(new EventHandler<ActionEvent>() {
             @Override public void handle(ActionEvent e) {
-            	
+            	if(graph1.gibStandort().equals("r1") && !graph1.gibRaetselAktiv()) {
+            		graph1.RaetselAktivSetzen();
+            		storyta.setText("Das ist das Rätsel! Gebe die Lösung in das Textfeld ein und klicke auf 'abschicken'.");
+            		raum.setImage(raetsel1);
+            		label1.setText("Benutzername:");
+            		label2.setText("Passwort:");
+            	}
             }
         });
         
         btn2.setOnAction(new EventHandler<ActionEvent>() {
             @Override public void handle(ActionEvent e) {
-            	if(graph1.gibStandort().equals("raum1")) {
-
-            	}
+            	tf1.setText(graph1.gibStandort());
             }
         });
         
         btn3.setOnAction(new EventHandler<ActionEvent>() {
             @Override public void handle(ActionEvent e) {
-            	if(graph1.gibStandort().equals("raum1")) {
-
-            	}
+            	if(graph1.gibRaetselAktiv()) {
+            	tf1.setText("true");
+            } else {
+            	tf1.setText("false");
+            }
             }
         });
         
         tfb.setOnAction(new EventHandler<ActionEvent>() {
         	@Override public void handle (ActionEvent e) {
-                if(tf1.getText().toString().equalsIgnoreCase("test")) {
-                	tf1.setText("richtig");
-                } else {
-                	tf1.setText("falsch");
+        		//if(graph1.gibStandort().equals("r1") && graph1.gibRaetselAktiv()){
+                if(tf1.getText().toString().equalsIgnoreCase("Pentagon") && tf2.getText().toString().equalsIgnoreCase("92")) {
+                	graph1.RaetselInaktivSetzen();
+                	graph1.standortSetzen("r2");
+                	minimap.setImage(minimap2);
+                	raum.setImage(Raum2);
+                	label1.setText("---");
+                	label2.setText("---");
+                	tf1.clear();
+                	tf2.clear();
+                	storyta.setText("willkommen in Raum 2!");
                 }
         	}
+        	//}
         });
-        
-        
     }
-
 
     public static void main(String[] args) {
         launch(args);
