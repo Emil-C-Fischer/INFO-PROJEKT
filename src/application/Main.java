@@ -27,7 +27,7 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception {
     	
  
-    	
+    	//Graph init
     	graph1.knotenEinfuegen(new RAUM("raum1", "r1", 1));
     	graph1.knotenEinfuegen(new RAUM("raum2", "r2", 2));
     	graph1.knotenEinfuegen(new RAUM("raum3", "r3", 3));
@@ -35,9 +35,9 @@ public class Main extends Application {
     	graph1.knotenEinfuegen(new RAUM("raum5", "r5", 5));
     	
     	graph1.standortSetzen("r1");
-    	
     	System.out.println(graph1.gibStandort());
     	
+    	//Javafx init
     	Pane root = new Pane();
 
         Scene scene = new Scene(root, 1880, 950);
@@ -109,24 +109,35 @@ public class Main extends Application {
         root.getChildren().add(btn3);
 
         
-        
-        btn1.setOnAction(new EventHandler<ActionEvent>() {
+        //------------------SPIELLOGIK------------------//
+        btn2.setText("raum ändern");
+        btn2.setOnAction(new EventHandler<ActionEvent>() {
             @Override public void handle(ActionEvent e) {
-            	textfield.setImage(spielbeginnt);
+            	graph1.standortSetzen("r2");
             }
         });
         
+        
+        
+        btn1.setOnAction(new EventHandler<ActionEvent>() {
+            @Override public void handle(ActionEvent e) {
+            	if(graph1.gibStandort().equals("raum1")) {
+            	textfield.setImage(spielbeginnt);
+            	}
+            }
+        });
+        
+        
         tfb.setOnAction(new EventHandler<ActionEvent>() {
         	@Override public void handle (ActionEvent e) {
-                if(tf1.getText() == "test") {
-                	System.out.println("richtig");
+                if(tf1.getText().toString().equalsIgnoreCase("test")) {
+                	tf1.setText("richtig");
                 } else {
-                	System.out.println("falsch");
+                	tf1.setText("falsch");
                 }
         	}
         });
         
-
     }
 
 
