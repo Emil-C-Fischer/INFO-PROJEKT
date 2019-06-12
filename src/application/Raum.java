@@ -5,6 +5,7 @@ class RAUM extends DE{
     private String kuerzel;
     private int index; //in am
     private boolean standort;
+    private boolean raetselAktiv;
     
     RAUM(String bez, String k, int i){
         bezeichnung = bez;
@@ -23,6 +24,14 @@ class RAUM extends DE{
     
     String gibBezeichnung(){
         return bezeichnung;
+    }
+    
+    boolean gibRaetselAktiv() {
+    	return raetselAktiv;
+    }
+    
+    void RaetselAktivSetzen() {
+    	raetselAktiv = true;
     }
     
     boolean standortSetzen(boolean b){
