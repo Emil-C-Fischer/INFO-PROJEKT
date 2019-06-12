@@ -81,7 +81,7 @@ public class Main extends Application {
         btn3.setPrefHeight(70);
         btn3.setPrefWidth(200);
         
-        
+       
         root.getChildren().add(btn1);        
         root.getChildren().add(btn2);
         root.getChildren().add(btn3);
