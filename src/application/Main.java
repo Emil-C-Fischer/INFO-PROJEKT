@@ -177,6 +177,7 @@ public class Main extends Application {
                 if(tf1.getText().toString().equalsIgnoreCase("Pentagon") && tf2.getText().toString().equalsIgnoreCase("92")) {
                 	graph1.RaetselInaktivSetzen();
                 	graph1.standortSetzen("r2");
+                	System.out.println(graph1.gibStandort());
                 	minimap.setImage(minimap2);
                 	raum.setImage(Raum2);
                 	label1.setText("---");
