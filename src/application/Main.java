@@ -161,23 +161,19 @@ public class Main extends Application {
         
         btn2.setOnAction(new EventHandler<ActionEvent>() {
             @Override public void handle(ActionEvent e) {
-            	tf1.setText(graph1.gibStandort());
+
             }
         });
         
         btn3.setOnAction(new EventHandler<ActionEvent>() {
             @Override public void handle(ActionEvent e) {
-            	if(graph1.gibRaetselAktiv()) {
-            	tf1.setText("true");
-            } else {
-            	tf1.setText("false");
-            }
+            	
             }
         });
         
         tfb.setOnAction(new EventHandler<ActionEvent>() {
         	@Override public void handle (ActionEvent e) {
-        		//if(graph1.gibStandort().equals("r1") && graph1.gibRaetselAktiv()){
+        		if(graph1.gibStandort().equals("r1") && graph1.gibRaetselAktiv()){
                 if(tf1.getText().toString().equalsIgnoreCase("Pentagon") && tf2.getText().toString().equalsIgnoreCase("92")) {
                 	graph1.RaetselInaktivSetzen();
                 	graph1.standortSetzen("r2");
@@ -188,9 +184,11 @@ public class Main extends Application {
                 	tf1.clear();
                 	tf2.clear();
                 	storyta.setText("willkommen in Raum 2!");
+                } else {
+                	storyta.setText("Das ist das Rätsel! Gebe die Lösung in das Textfeld ein und klicke auf 'abschicken'. -----Deine Lösung war leider falsch. probiere es noch einmal!-----");
                 }
         	}
-        	//}
+        	}
         });
     }
 

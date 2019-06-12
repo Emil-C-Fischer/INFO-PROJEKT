@@ -32,10 +32,12 @@ class RAUM extends DE{
     
     void RaetselTrue() {
     	raetselAktiv = true;
+    	System.out.println("raetsel true");
     }
     
     void RaetselFalse() {
     	raetselAktiv = false;
+    	System.out.println("raetsel false");
     }
     
     boolean standortSetzen(boolean b){

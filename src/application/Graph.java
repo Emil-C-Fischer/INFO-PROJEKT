@@ -82,7 +82,6 @@ class GRAPH{
                 standortGesetzt = true;
                 ausgabe = "Standort auf '" + kuerzel + "' gesetzt!";
                 standort = knotenliste[i].gibInhalt().gibKuerzel();
-                raetselAktiv = knotenliste[i].gibInhalt().gibRaetselAktiv();
             } else {
                 i++;
             }
@@ -103,7 +102,7 @@ class GRAPH{
     }
     
     boolean gibRaetselAktiv() {
-    	return raetselAktiv;
+    	return raetselAktiv = knotenliste[suchIndex(standort)].gibInhalt().gibRaetselAktiv();
     }
     
     
