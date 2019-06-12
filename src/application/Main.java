@@ -21,7 +21,23 @@ public class Main extends Application {
 	
 	GRAPH graph1 = new GRAPH();
 	
-
+	 private void loadRo1(){
+		 graph1.standortSetzen("r1");
+		 
+	 }
+	 
+	 private void loadRo2(){
+	 }
+	 
+	 private void loadRo3(){
+	 }
+	 
+	 private void loadRo4(){
+	 }
+	 
+	 private void loadRo5(){
+	 }
+	
 	
     @Override
     public void start(Stage primaryStage) throws Exception {
@@ -59,20 +75,26 @@ public class Main extends Application {
         root.getChildren().add(tfb);
 
         //Picture declaration
-        Image minimap1 = new Image("/minimap/minimap1.jpg");
-        Image tempel1 = new Image("/main/tempel1.jpg");
+        Image minimapph = new Image("/minimap/minimap1.jpg");
+        Image minimap1 = new Image("/minimap/1 Tempel Minimap.jpg");
+        Image minimap2 = new Image("/minimap/2. Raum Minimap.jpg");
+        Image minimap3 = new Image("/minimap/3. Raum Minimap.jpg");
+        Image minimap4 = new Image("/minimap/4. Raum Minimap.jpg");
+        Image minimap5 = new Image("/minimap/2. Schatzkammer Minimap.jpg");
+        
+        Image Raum1 = new Image("/main/tempel1.jpg");
         Image testtext = new Image("/text/testtext.jpg");
         Image spielbeginnt = new Image("/text/spiel-beginnt.jpg");
 
         //picture fields
-        ImageView main = new ImageView();
-        main.setImage(tempel1);
-        main.setLayoutX(384);
-        root.getChildren().add(main);
-        main.setFitWidth(1496);
+        ImageView raum = new ImageView();
+        raum.setImage(Raum1);
+        raum.setLayoutX(384);
+        root.getChildren().add(raum);
+        raum.setFitWidth(1496);
 
         ImageView minimap = new ImageView();
-        minimap.setImage(minimap1);
+        minimap.setImage(minimapph);
         root.getChildren().add(minimap);
 
         ImageView textfield = new ImageView();
@@ -108,6 +130,13 @@ public class Main extends Application {
         root.getChildren().add(btn2);
         root.getChildren().add(btn3);
 
+        btn2.setText("raum ändern");
+        btn2.setOnAction(new EventHandler<ActionEvent>() {
+            @Override public void handle(ActionEvent e) {
+            	graph1.standortSetzen("r2");
+            }
+        });
+        	
         
         //------------------SPIELLOGIK------------------//
         btn2.setText("raum ändern");
