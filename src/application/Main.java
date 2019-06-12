@@ -67,7 +67,6 @@ public class Main extends Application {
         btn1.setPrefWidth(200);
         
         
-        
         Button btn2 = new Button();
         btn2.setText("btn2");
         btn2.setLayoutX(604);
