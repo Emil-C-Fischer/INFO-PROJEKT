@@ -97,6 +97,9 @@ public class Main extends Application {
         Image minimap5 = new Image("/minimap/m5.jpg");
         //raetsel
         Image raetsel1 = new Image("/raetsel/r1.jpg");
+        Image raetsel2 = new Image("/raetsel/r2.jpg");
+        Image raetsel3 = new Image("/raetsel/r3.jpg");
+        Image raetsel4 = new Image("/raetsel/r4.jpg");
         //Raeume
         Image Raum1 = new Image("/raum/r1.jpg");
         Image Raum2 = new Image("/raum/r2.jpg");
@@ -155,6 +158,25 @@ public class Main extends Application {
             		raum.setImage(raetsel1);
             		label1.setText("Benutzername:");
             		label2.setText("Passwort:");
+            		btn1.setText("---");
+            	} else if(graph1.gibStandort().equals("r2") && !graph1.gibRaetselAktiv()) {
+            		graph1.RaetselAktivSetzen();
+            		storyta.setText("Das ist das Rätsel! Gebe die Reihenfolge, in der du die Hebel betätigen willst in das Textfeld ein und klicke auf 'abschicken'.");
+            		raum.setImage(raetsel2);
+            		label1.setText("Eingabe:");
+            		btn1.setText("---");
+            	} else if(graph1.gibStandort().equals("r3") && !graph1.gibRaetselAktiv()) {
+            		graph1.RaetselAktivSetzen();
+            		storyta.setText("Das ist das Rätsel! Gebe die richtige Lösung in das Textfeld ein und klicke auf 'abschicken'.");
+            		raum.setImage(raetsel3);
+            		label1.setText("Eingabe:");
+            		btn1.setText("---");
+            	} else if(graph1.gibStandort().equals("r4") && !graph1.gibRaetselAktiv()) {
+            		graph1.RaetselAktivSetzen();
+            		storyta.setText("Das ist das Rätsel! Gebe die richtige Lösung in das Textfeld ein und klicke auf 'abschicken'.");
+            		raum.setImage(raetsel4);
+            		label1.setText("Eingabe:");
+            		btn1.setText("---");
             	}
             }
         });
@@ -174,21 +196,70 @@ public class Main extends Application {
         tfb.setOnAction(new EventHandler<ActionEvent>() {
         	@Override public void handle (ActionEvent e) {
         		if(graph1.gibStandort().equals("r1") && graph1.gibRaetselAktiv()){
-                if(tf1.getText().toString().equalsIgnoreCase("Pentagon") && tf2.getText().toString().equalsIgnoreCase("92")) {
-                	graph1.RaetselInaktivSetzen();
-                	graph1.standortSetzen("r2");
-                	System.out.println(graph1.gibStandort());
-                	minimap.setImage(minimap2);
-                	raum.setImage(Raum2);
-                	label1.setText("---");
-                	label2.setText("---");
-                	tf1.clear();
-                	tf2.clear();
-                	storyta.setText("willkommen in Raum 2!");
-                } else {
-                	storyta.setText("Das ist das Rätsel! Gebe die Lösung in das Textfeld ein und klicke auf 'abschicken'. -----Deine Lösung war leider falsch. probiere es noch einmal!-----");
-                }
-        	}
+        			if(tf1.getText().toString().equalsIgnoreCase("Pentagon") && tf2.getText().toString().equalsIgnoreCase("92")) {
+        				graph1.RaetselInaktivSetzen();
+        				graph1.standortSetzen("r2");
+                		System.out.println(graph1.gibStandort());
+                		minimap.setImage(minimap2);
+                		raum.setImage(Raum2);
+                		label1.setText("---");
+                		label2.setText("---");
+                		tf1.clear();
+                		tf2.clear();
+                		storyta.setText("willkommen in Raum 2!");
+                		btn1.setText("zum Rätsel");
+        			} else {
+        				storyta.setText("Das ist das Rätsel! Gebe die Lösung in das Textfeld ein und klicke auf 'abschicken'. -----Deine Lösung war leider falsch. probiere es noch einmal!-----");
+        			}
+        		} else if(graph1.gibStandort().equals("r2") && graph1.gibRaetselAktiv()) {
+        			if(tf1.getText().toString().equalsIgnoreCase("21122012")) {
+        				graph1.RaetselInaktivSetzen();
+        				graph1.standortSetzen("r3");
+                		System.out.println(graph1.gibStandort());
+                		minimap.setImage(minimap3);
+                		raum.setImage(Raum3);
+                		label1.setText("---");
+                		label2.setText("---");
+                		tf1.clear();
+                		tf2.clear();
+                		storyta.setText("willkommen in Raum 3!");
+                		btn1.setText("zum Rätsel");
+        			} else {
+        				storyta.setText("Das ist das Rätsel! Gebe die Reihenfolge, in der du die Hebel betätigen willst in das Textfeld ein und klicke auf 'abschicken'. -----Deine Lösung war leider falsch. probiere es noch einmal!-----");
+        			}
+        		} else if(graph1.gibStandort().equals("r3") && graph1.gibRaetselAktiv()) {
+        			if(tf1.getText().toString().equalsIgnoreCase("42")) {
+        				graph1.RaetselInaktivSetzen();
+        				graph1.standortSetzen("r4");
+                		System.out.println(graph1.gibStandort());
+                		minimap.setImage(minimap4);
+                		raum.setImage(Raum4);
+                		label1.setText("---");
+                		label2.setText("---");
+                		tf1.clear();
+                		tf2.clear();
+                		storyta.setText("willkommen in Raum 4!");
+                		btn1.setText("zum Rätsel");
+        			} else {
+        				storyta.setText("Das ist das Rätsel! Gebe die richtige Lösung in das Textfeld ein und klicke auf 'abschicken'. -----Deine Lösung war leider falsch. probiere es noch einmal!-----");
+        			}
+        		} else if(graph1.gibStandort().equals("r4") && graph1.gibRaetselAktiv()) {
+            		if(tf1.getText().toString().equalsIgnoreCase("aurum")) {
+            			graph1.RaetselInaktivSetzen();
+           				graph1.standortSetzen("r5");
+                   		System.out.println(graph1.gibStandort());
+                   		minimap.setImage(minimap5);
+                   		raum.setImage(Raum5);
+                   		label1.setText("---");
+                   		label2.setText("---");
+                   		tf1.clear();
+                  		tf2.clear();
+                   		storyta.setText("willkommen in Raum 5!");
+                   		btn1.setText("---");
+           			} else {
+           				storyta.setText("Das ist das Rätsel! Gebe die richtige Lösung in das Textfeld ein und klicke auf 'abschicken'. -----Deine Lösung war leider falsch. probiere es noch einmal!-----");
+           			}
+       			}
         	}
         });
     }
