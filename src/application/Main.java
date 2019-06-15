@@ -18,7 +18,7 @@ public class Main extends Application {
 	
 	GRAPH graph1 = new GRAPH();
 	int tips;
-	int counter = 1;
+	int counter = 0;
 	String story;
     
     @Override
@@ -259,11 +259,13 @@ public class Main extends Application {
             }
         });
         
+        /*
         btn3.setOnAction(new EventHandler<ActionEvent>() {
             @Override public void handle(ActionEvent e) {
             	
             }
         });
+        */
         
         tfb.setOnAction(new EventHandler<ActionEvent>() {
         	@Override public void handle (ActionEvent e) {
@@ -278,10 +280,10 @@ public class Main extends Application {
                 		label2.setText("---");
                 		tf1.clear();
                 		tf2.clear();
-                		if (counter ==1 ) {
+                		if (counter == 0) {
                 			storyta.setText("Glückwunsch, du hast das Rätsel auf Anhieb gelöst!\nWillkommen in Raum 2!\nDu hast "+tips+" tip(s) abgerufen.");
                 		} else {
-                			storyta.setText("Du hast " +counter+" Versuche benötigt. \nWillkommen in Raum 2!\nDu hast "+tips+" tip(s) abgerufen.");
+                			storyta.setText("Du hast " +counter+1+" Versuche benötigt. \nWillkommen in Raum 2!\nDu hast "+tips+" tip(s) abgerufen.");
                 		}
                 		counter = 0;
                 		tips = 0;
@@ -305,10 +307,10 @@ public class Main extends Application {
                 		label2.setText("---");
                 		tf1.clear();
                 		tf2.clear();
-                		if (counter ==1 ) {
+                		if (counter == 0) {
                 			storyta.setText("Glückwunsch, du hast das Rätsel auf Anhieb gelöst!\nWillkommen in Raum 3!\nDu hast "+tips+" tip(s) abgerufen.");
                 		} else {
-                			storyta.setText("Du hast " +counter+" Versuche benötigt. \nWillkommen in Raum 3!\nDu hast "+tips+" tip(s) abgerufen.");
+                			storyta.setText("Du hast " +counter+1+" Versuche benötigt. \nWillkommen in Raum 3!\nDu hast "+tips+" tip(s) abgerufen.");
                 		}
                 		counter = 0;
                 		tips = 0;
@@ -335,7 +337,7 @@ public class Main extends Application {
                 		if (counter ==1 ) {
                 			storyta.setText("Glückwunsch, du hast das Rätsel auf Anhieb gelöst!\nWillkommen in Raum 4!\nDu hast "+tips+" tip(s) abgerufen.");
                 		} else {
-                			storyta.setText("Du hast " +counter+" Versuche benötigt. \nWillkommen in Raum 4!\nDu hast "+tips+" tip(s) abgerufen.");
+                			storyta.setText("Du hast " +counter+1+" Versuche benötigt. \nWillkommen in Raum 4!\nDu hast "+tips+" tip(s) abgerufen.");
                 		}
                 		counter = 0;
                 		tips = 0;
@@ -359,10 +361,10 @@ public class Main extends Application {
                    		label2.setText("---");
                    		tf1.clear();
                   		tf2.clear();
-                  		if (counter ==1 ) {
+                  		if (counter == 0) {
                 			storyta.setText("Glückwunsch, du hast das Rätsel auf Anhieb gelöst!\nWillkommen in Raum 5, Du hast das Spiel durchgespielt!!\nDu hast "+tips+" tip(s) abgerufen.");
                 		} else {
-                			storyta.setText("Du hast " +counter+" Versuche benötigt. \nWillkommen in Raum 5, Du hast das Spiel durchgespielt!!\nDu hast "+tips+" tip(s) abgerufen.");
+                			storyta.setText("Du hast " +counter+1+" Versuche benötigt. \nWillkommen in Raum 5, Du hast das Spiel durchgespielt!!\nDu hast "+tips+" tip(s) abgerufen.");
                 		}
                 		counter = 0;
                   		tips = 0;
