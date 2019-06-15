@@ -1,8 +1,5 @@
 package application;
 
-import java.awt.Insets;
-
-
 import javafx.application.Application;
 import javafx.stage.Stage;
 import javafx.scene.Scene;
@@ -13,8 +10,6 @@ import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
-import javafx.scene.text.Font;
-import javafx.scene.text.Text;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 
@@ -22,8 +17,10 @@ import javafx.event.EventHandler;
 public class Main extends Application {
 	
 	GRAPH graph1 = new GRAPH();
-	
-	
+	int tips;
+	int counter = 1;
+	String story;
+    
     @Override
     public void start(Stage primaryStage) throws Exception {
     	
@@ -89,7 +86,6 @@ public class Main extends Application {
 
         //Picture declaration--------
         //Minimap
-        Image minimapph = new Image("/minimap/minimap1.jpg");
         Image minimap1 = new Image("/minimap/m1.jpg");
         Image minimap2 = new Image("/minimap/m2.jpg");
         Image minimap3 = new Image("/minimap/m3.jpg");
@@ -143,7 +139,7 @@ public class Main extends Application {
 
         root.getChildren().add(btn1);
         root.getChildren().add(btn2);
-        root.getChildren().add(btn3);
+        //root.getChildren().add(btn3);
         
         //------------------SPIELLOGIK------------------//
         
@@ -154,36 +150,112 @@ public class Main extends Application {
             @Override public void handle(ActionEvent e) {
             	if(graph1.gibStandort().equals("r1") && !graph1.gibRaetselAktiv()) {
             		graph1.RaetselAktivSetzen();
-            		storyta.setText("Das ist das Rätsel! Gebe die Lösung in das Textfeld ein und klicke auf 'abschicken'.");
+            		story = "Das ist das Rätsel! Gebe die Lösung in das Textfeld ein und klicke auf 'abschicken'.";
+            		storyta.setText(story);
             		raum.setImage(raetsel1);
             		label1.setText("Benutzername:");
             		label2.setText("Passwort:");
             		btn1.setText("---");
+            		btn2.setText("Tip");
             	} else if(graph1.gibStandort().equals("r2") && !graph1.gibRaetselAktiv()) {
             		graph1.RaetselAktivSetzen();
-            		storyta.setText("Das ist das Rätsel! Gebe die Reihenfolge, in der du die Hebel betätigen willst in das Textfeld ein und klicke auf 'abschicken'.");
+            		story = "Das ist das Rätsel! Gebe die Reihenfolge, in der du die Hebel betätigen willst in das Textfeld ein und klicke auf 'abschicken'.";
+            		storyta.setText(story);
             		raum.setImage(raetsel2);
             		label1.setText("Eingabe:");
             		btn1.setText("---");
+            		btn2.setText("Tip");
             	} else if(graph1.gibStandort().equals("r3") && !graph1.gibRaetselAktiv()) {
             		graph1.RaetselAktivSetzen();
-            		storyta.setText("Das ist das Rätsel! Gebe die richtige Lösung in das Textfeld ein und klicke auf 'abschicken'.");
+            		story = "Das ist das Rätsel! Gebe die richtige Lösung in das Textfeld ein und klicke auf 'abschicken'.";
+            		storyta.setText(story);
             		raum.setImage(raetsel3);
             		label1.setText("Eingabe:");
             		btn1.setText("---");
+            		btn2.setText("Tip");
             	} else if(graph1.gibStandort().equals("r4") && !graph1.gibRaetselAktiv()) {
             		graph1.RaetselAktivSetzen();
-            		storyta.setText("Das ist das Rätsel! Gebe die richtige Lösung in das Textfeld ein und klicke auf 'abschicken'.");
+            		story = "Das ist das Rätsel! Gebe die richtige Lösung in das Textfeld ein und klicke auf 'abschicken'.";
+            		storyta.setText(story);
             		raum.setImage(raetsel4);
             		label1.setText("Eingabe:");
             		btn1.setText("---");
+            		btn2.setText("Tip");
             	}
             }
         });
         
         btn2.setOnAction(new EventHandler<ActionEvent>() {
             @Override public void handle(ActionEvent e) {
-
+            	if(graph1.gibStandort().equals("r1") && graph1.gibRaetselAktiv()) {
+            			if(tips == 0) {
+            				story = storyta.getText();
+            				storyta.setText(story +"\n Wer ist nochmal für die US-Streitkräfte zuständig?");
+            				tips++;
+            			} else if (tips == 1) {
+            				story = storyta.getText();
+            				storyta.setText(story +"\n Mensch, das Ergebnis kann doch nicht so schwer sein, leg dich doch nicht quer!");
+            				tips++;
+            			} else if (tips == 2) {
+            				story = storyta.getText();
+            				storyta.setText(story +"\n Hast du's echt nicht begriffen? Es geht um die QUERSUMME!");
+            				tips++;
+            			} else if (tips <= 3) {
+            				story = storyta.getText();
+            				storyta.setText(story +"\n Du Dödel! mehr Tips gibs nicht!");
+            			}
+            		} else if(graph1.gibStandort().equals("r2") && graph1.gibRaetselAktiv()) {
+            			if(tips == 0) {
+            				story = storyta.getText();
+            				storyta.setText(story +"\n --TIP1--");
+            				tips++;
+            			} else if (tips == 1) {
+            				story = storyta.getText();
+            				storyta.setText(story +"\n --TIP2--");
+            				tips++;
+            			} else if (tips == 2) {
+            				story = storyta.getText();
+            				storyta.setText(story +"\n --TIP3--");
+            				tips++;
+            			} else if (tips <= 3) {
+            				story = storyta.getText();
+            				storyta.setText(story +"\n Du Dödel! mehr Tips gibs nicht!");
+            			}
+            		} else if(graph1.gibStandort().equals("r3") && graph1.gibRaetselAktiv()) {
+            			if(tips == 0) {
+            				story = storyta.getText();
+            				storyta.setText(story +"\n --TIP1--");
+            				tips++;
+            			} else if (tips == 1) {
+            				story = storyta.getText();
+            				storyta.setText(story +"\n --TIP2--");
+            				tips++;
+            			} else if (tips == 2) {
+            				story = storyta.getText();
+            				storyta.setText(story +"\n --TIP3--");
+            				tips++;
+            			} else if (tips <= 3) {
+            				story = storyta.getText();
+            				storyta.setText(story +"\n Du Dödel! mehr Tips gibs nicht!");
+            			}
+            		} else if(graph1.gibStandort().equals("r4") && graph1.gibRaetselAktiv()) {
+            			if(tips == 0) {
+            				story = storyta.getText();
+            				storyta.setText(story +"\n --TIP1--");
+            				tips++;
+            			} else if (tips == 1) {
+            				story = storyta.getText();
+            				storyta.setText(story +"\n --TIP2--");
+            				tips++;
+            			} else if (tips == 2) {
+            				story = storyta.getText();
+            				storyta.setText(story +"\n --TIP3--");
+            				tips++;
+            			} else if (tips <= 3) {
+            				story = storyta.getText();
+            				storyta.setText(story +"\n Du Dödel! mehr Tips gibs nicht!");
+            			}
+            		}
             }
         });
         
@@ -206,10 +278,21 @@ public class Main extends Application {
                 		label2.setText("---");
                 		tf1.clear();
                 		tf2.clear();
-                		storyta.setText("willkommen in Raum 2!");
+                		if (counter ==1 ) {
+                			storyta.setText("Glückwunsch, du hast das Rätsel auf Anhieb gelöst!\nWillkommen in Raum 2!\nDu hast "+tips+" tip(s) abgerufen.");
+                		} else {
+                			storyta.setText("Du hast " +counter+" Versuche benötigt. \nWillkommen in Raum 2!\nDu hast "+tips+" tip(s) abgerufen.");
+                		}
+                		counter = 0;
+                		tips = 0;
                 		btn1.setText("zum Rätsel");
+                		btn2.setText("---");
         			} else {
-        				storyta.setText("Das ist das Rätsel! Gebe die Lösung in das Textfeld ein und klicke auf 'abschicken'. -----Deine Lösung war leider falsch. probiere es noch einmal!-----");
+        				story = storyta.getText();
+        				storyta.setText(story + "\n  -----Deine Lösung war leider falsch. probiere es noch einmal!-----");
+        				tf1.clear();
+        				tf2.clear();
+        				counter ++;
         			}
         		} else if(graph1.gibStandort().equals("r2") && graph1.gibRaetselAktiv()) {
         			if(tf1.getText().toString().equalsIgnoreCase("21122012")) {
@@ -222,13 +305,24 @@ public class Main extends Application {
                 		label2.setText("---");
                 		tf1.clear();
                 		tf2.clear();
-                		storyta.setText("willkommen in Raum 3!");
+                		if (counter ==1 ) {
+                			storyta.setText("Glückwunsch, du hast das Rätsel auf Anhieb gelöst!\nWillkommen in Raum 3!\nDu hast "+tips+" tip(s) abgerufen.");
+                		} else {
+                			storyta.setText("Du hast " +counter+" Versuche benötigt. \nWillkommen in Raum 3!\nDu hast "+tips+" tip(s) abgerufen.");
+                		}
+                		counter = 0;
+                		tips = 0;
                 		btn1.setText("zum Rätsel");
+                		btn2.setText("---");
         			} else {
-        				storyta.setText("Das ist das Rätsel! Gebe die Reihenfolge, in der du die Hebel betätigen willst in das Textfeld ein und klicke auf 'abschicken'. -----Deine Lösung war leider falsch. probiere es noch einmal!-----");
+        				story = storyta.getText();
+        				storyta.setText(story +"\n -----Deine Lösung war leider falsch. probiere es noch einmal!-----");
+           				tf1.clear();
+        				tf2.clear();
+        				counter ++;
         			}
         		} else if(graph1.gibStandort().equals("r3") && graph1.gibRaetselAktiv()) {
-        			if(tf1.getText().toString().equalsIgnoreCase("42")) {
+        			if(tf1.getText().toString().equalsIgnoreCase("29")) {
         				graph1.RaetselInaktivSetzen();
         				graph1.standortSetzen("r4");
                 		System.out.println(graph1.gibStandort());
@@ -238,10 +332,21 @@ public class Main extends Application {
                 		label2.setText("---");
                 		tf1.clear();
                 		tf2.clear();
-                		storyta.setText("willkommen in Raum 4!");
+                		if (counter ==1 ) {
+                			storyta.setText("Glückwunsch, du hast das Rätsel auf Anhieb gelöst!\nWillkommen in Raum 4!\nDu hast "+tips+" tip(s) abgerufen.");
+                		} else {
+                			storyta.setText("Du hast " +counter+" Versuche benötigt. \nWillkommen in Raum 4!\nDu hast "+tips+" tip(s) abgerufen.");
+                		}
+                		counter = 0;
+                		tips = 0;
                 		btn1.setText("zum Rätsel");
+                		btn2.setText("---");
         			} else {
-        				storyta.setText("Das ist das Rätsel! Gebe die richtige Lösung in das Textfeld ein und klicke auf 'abschicken'. -----Deine Lösung war leider falsch. probiere es noch einmal!-----");
+        				story = storyta.getText();
+        				storyta.setText(story +"\n -----Deine Lösung war leider falsch. probiere es noch einmal!-----");
+           				tf1.clear();
+        				tf2.clear();
+        				counter ++;
         			}
         		} else if(graph1.gibStandort().equals("r4") && graph1.gibRaetselAktiv()) {
             		if(tf1.getText().toString().equalsIgnoreCase("aurum")) {
@@ -254,14 +359,26 @@ public class Main extends Application {
                    		label2.setText("---");
                    		tf1.clear();
                   		tf2.clear();
-                   		storyta.setText("willkommen in Raum 5!");
+                  		if (counter ==1 ) {
+                			storyta.setText("Glückwunsch, du hast das Rätsel auf Anhieb gelöst!\nWillkommen in Raum 5, Du hast das Spiel durchgespielt!!\nDu hast "+tips+" tip(s) abgerufen.");
+                		} else {
+                			storyta.setText("Du hast " +counter+" Versuche benötigt. \nWillkommen in Raum 5, Du hast das Spiel durchgespielt!!\nDu hast "+tips+" tip(s) abgerufen.");
+                		}
+                		counter = 0;
+                  		tips = 0;
                    		btn1.setText("---");
+                		btn2.setText("---");
            			} else {
-           				storyta.setText("Das ist das Rätsel! Gebe die richtige Lösung in das Textfeld ein und klicke auf 'abschicken'. -----Deine Lösung war leider falsch. probiere es noch einmal!-----");
+           				story = storyta.getText();
+        				storyta.setText(story +"\n -----Deine Lösung war leider falsch. probiere es noch einmal!-----");
+           				tf1.clear();
+        				tf2.clear();
+        				counter ++;
            			}
        			}
         	}
         });
+        
     }
 
     public static void main(String[] args) {
