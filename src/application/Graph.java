@@ -103,11 +103,5 @@ class GRAPH{
     
     boolean gibRaetselAktiv() {
     	return raetselAktiv = knotenliste[suchIndex(standort)].gibInhalt().gibRaetselAktiv();
-    }
-    
-    
+    }   
 }
-
-
-
-

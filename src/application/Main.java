@@ -188,74 +188,66 @@ public class Main extends Application {
         btn2.setOnAction(new EventHandler<ActionEvent>() {
             @Override public void handle(ActionEvent e) {
             	if(graph1.gibStandort().equals("r1") && graph1.gibRaetselAktiv()) {
-            			if(tips == 0) {
-            				story = storyta.getText();
-            				storyta.setText(story +"\n Wer ist nochmal für die US-Streitkräfte zuständig?");
-            				tips++;
-            			} else if (tips == 1) {
-            				story = storyta.getText();
-            				storyta.setText(story +"\n Mensch, das Ergebnis kann doch nicht so schwer sein, leg dich doch nicht quer!");
-            				tips++;
-            			} else if (tips == 2) {
-            				story = storyta.getText();
-            				storyta.setText(story +"\n Hast du's echt nicht begriffen? Es geht um die QUERSUMME!");
-            				tips++;
-            			} else if (tips <= 3) {
-            				story = storyta.getText();
-            				storyta.setText(story +"\n Du Dödel! mehr Tips gibs nicht!");
-            			}
-            		} else if(graph1.gibStandort().equals("r2") && graph1.gibRaetselAktiv()) {
-            			if(tips == 0) {
-            				story = storyta.getText();
-            				storyta.setText(story +"\n --TIP1--");
-            				tips++;
-            			} else if (tips == 1) {
-            				story = storyta.getText();
-            				storyta.setText(story +"\n --TIP2--");
-            				tips++;
-            			} else if (tips == 2) {
-            				story = storyta.getText();
-            				storyta.setText(story +"\n --TIP3--");
-            				tips++;
-            			} else if (tips <= 3) {
-            				story = storyta.getText();
-            				storyta.setText(story +"\n Du Dödel! mehr Tips gibs nicht!");
-            			}
-            		} else if(graph1.gibStandort().equals("r3") && graph1.gibRaetselAktiv()) {
-            			if(tips == 0) {
-            				story = storyta.getText();
-            				storyta.setText(story +"\n --TIP1--");
-            				tips++;
-            			} else if (tips == 1) {
-            				story = storyta.getText();
-            				storyta.setText(story +"\n --TIP2--");
-            				tips++;
-            			} else if (tips == 2) {
-            				story = storyta.getText();
-            				storyta.setText(story +"\n --TIP3--");
-            				tips++;
-            			} else if (tips <= 3) {
-            				story = storyta.getText();
-            				storyta.setText(story +"\n Du Dödel! mehr Tips gibs nicht!");
-            			}
-            		} else if(graph1.gibStandort().equals("r4") && graph1.gibRaetselAktiv()) {
-            			if(tips == 0) {
-            				story = storyta.getText();
-            				storyta.setText(story +"\n --TIP1--");
-            				tips++;
-            			} else if (tips == 1) {
-            				story = storyta.getText();
-            				storyta.setText(story +"\n --TIP2--");
-            				tips++;
-            			} else if (tips == 2) {
-            				story = storyta.getText();
-            				storyta.setText(story +"\n --TIP3--");
-            				tips++;
-            			} else if (tips <= 3) {
-            				story = storyta.getText();
-            				storyta.setText(story +"\n Du Dödel! mehr Tips gibs nicht!");
-            			}
-            		}
+            		if(tips == 0) {
+           				story = storyta.getText();
+           				storyta.setText(story +"\n Wer ist nochmal für die US-Streitkräfte zuständig?");
+           				tips++;
+           			} else if (tips == 1) {
+           				story = storyta.getText();
+           				storyta.setText(story +"\n Mensch, das Ergebnis kann doch nicht so schwer sein, leg dich doch nicht quer!");
+           				tips++;
+           			} else if (tips == 2) {
+           				story = storyta.getText();
+           				storyta.setText(story +"\n Hast du's echt nicht begriffen? Es geht um die QUERSUMME!");
+           				tips++;
+           			} else if (tips <= 3) {
+           				story = storyta.getText();
+           				storyta.setText(story +"\n Du Dödel! mehr Tips gibs nicht!");
+           			}
+            	} else if(graph1.gibStandort().equals("r2") && graph1.gibRaetselAktiv()) {
+           			if(tips == 0) {
+            			story = storyta.getText();
+           				storyta.setText(story +"\n Man kann diese Gleichungen doch als Rechnungen ansehen, oder?");
+           				tips++;
+           			} else if (tips == 1) {
+           				story = storyta.getText();
+           				storyta.setText(story +"\n wenn ich die Zeichen mal mit Buchstaben ersetze ist es dann übersichtlicher und ich kann die Gleichungen danach lösen...");
+           				tips++;
+           			} else if (tips <= 2) {
+           				story = storyta.getText();
+           				storyta.setText(story +"\n Du Dödel! mehr Tips gibs nicht!");
+           			}
+           		} else if(graph1.gibStandort().equals("r3") && graph1.gibRaetselAktiv()) {
+            		if(tips == 0) {
+           				story = storyta.getText();
+           				storyta.setText(story +"\n --TIP1--");
+           				tips++;
+           			} else if (tips == 1) {
+           				story = storyta.getText();
+           				storyta.setText(story +"\n --TIP2--");
+           				tips++;
+           			} else if (tips == 2) {
+           				story = storyta.getText();
+           				storyta.setText(story +"\n --TIP3--");
+           				tips++;
+            		} else if (tips <= 3) {
+            			story = storyta.getText();
+           				storyta.setText(story +"\n Du Dödel! mehr Tips gibs nicht!");
+           			}
+            	} else if(graph1.gibStandort().equals("r4") && graph1.gibRaetselAktiv()) {
+            		if(tips == 0) {
+           				story = storyta.getText();
+           				storyta.setText(story +"\n es ist also ein lateinisches Wort...");
+           				tips++;
+           			} else if (tips == 1) {
+           				story = storyta.getText();
+           				storyta.setText(story +"\n Gold hat eine bestimmte Abkürzung im Periodensystem. Warum?");
+           				tips++;
+           			} else if (tips <= 2) {
+           				story = storyta.getText();
+           				storyta.setText(story +"\n Du Dödel! mehr Tips gibs nicht!");
+           			}
+           		}
             }
         });
         
