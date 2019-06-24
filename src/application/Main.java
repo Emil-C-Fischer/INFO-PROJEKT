@@ -137,17 +137,6 @@ public class Main extends Application {
         btn2.setPrefHeight(70);
         btn2.setPrefWidth(200);
         btn2.setVisible(false);
-
-        Button btn3 = new Button();
-        btn3.setText("---");
-        btn3.setLayoutX(824);
-        btn3.setLayoutY(850);
-        btn3.setPrefHeight(70);
-        btn3.setPrefWidth(200);
-
-        root.getChildren().add(btn1);
-        root.getChildren().add(btn2);
-        //root.getChildren().add(btn3);
         
         //------------------SPIELLOGIK------------------//
         
@@ -314,14 +303,6 @@ public class Main extends Application {
            		}
             }
         });
-        
-        /*
-        btn3.setOnAction(new EventHandler<ActionEvent>() {
-            @Override public void handle(ActionEvent e) {
-            	
-            }
-        });
-        */
         
         tfb.setOnAction(new EventHandler<ActionEvent>() {
         	@Override public void handle (ActionEvent e) {
