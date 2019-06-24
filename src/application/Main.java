@@ -138,6 +138,9 @@ public class Main extends Application {
         btn2.setPrefWidth(200);
         btn2.setVisible(false);
         
+        root.getChildren().add(btn1);
+        root.getChildren().add(btn2);
+        
         //------------------SPIELLOGIK------------------//
         
         btn1.setText("zum Eingang");
@@ -468,6 +471,7 @@ public class Main extends Application {
                   		tips = 0;
                    		btn1.setText("---");
                 		btn2.setText("---");
+                		
                 		//DANKE
                 		Label danke = new Label();
                 		danke.setLayoutX(645);
