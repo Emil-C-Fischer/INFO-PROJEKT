@@ -144,7 +144,7 @@ public class Main extends Application {
         //------------------SPIELLOGIK------------------//
         
         btn1.setText("zum Eingang");
-        storyta.setText("Du wurdest vom US-Militär beauftragt, im Parque National El Mirador in Guatemala, ein vor kurzem entdeckter Tempel der Maya zu erforschen.\r\n" + 
+        storyta.setText("Du wurdest vom US-Militär beauftragt, im Parque National El Mirador in Guatemala einen vor kurzem entdeckten Mayatempel zu erforschen.\r\n" + 
         		"Ein paar Soldaten haben dich vor der Entdeckung abgesetzt und teilen dir mit, dass sie den Eingang der Ruine abgesperrt haben, damit Zivilisten hier kein dummes Zeug machen können.\r\n" + 
         		"");
         
@@ -153,9 +153,9 @@ public class Main extends Application {
             	if(graph1.gibStandort().equals("r1") && !graph1.gibRaetselAktiv()) {
             		graph1.RaetselAktivSetzen();
             		story = "Als du oben bei der Pyramide angekommen bist, bemerkst du, dass die Soldaten anscheinend vergessen haben, dir die Zugangsdaten zu geben und schon weggefahren sind.\r\n" + 
-            				"Vielleicht kommst du den Benutzernamen und auf das Passwort von selber.\r\n" + 
+            				"Vielleicht kommst du den Benutzernamen und auf das Passwort von selbst.\r\n" + 
             				"Auf den Holzkisten neben der Tür stehen einige Namen, die du als NATO-Buchstaben entschlüsselst.\r\n" + 
-            				"\"Mit diesen Buchstaben muss ich doch irgendwie auf den benutzernnamenkommen. Aber das sind nur sechs Buchstaben und der Benutzername hat acht.\" denkst du dir und überlegst weiter.\r\n" + 
+            				"\"Mit diesen Buchstaben muss ich doch irgendwie auf den benutzernnamen kommen. Aber das sind nur sechs Buchstaben und der Benutzername hat acht...\" denkst du dir und überlegst weiter.\r\n" + 
             				"\n--Gebe die Lösung in das Textfeld ein und klicke auf 'abschicken'.--";
             		storyta.setText(story);
             		raum.setImage(raetsel1);
@@ -173,10 +173,10 @@ public class Main extends Application {
             		tfb.setVisible(true);
             	} else if(graph1.gibStandort().equals("r2") && !graph1.gibRaetselAktiv()) {
             		graph1.RaetselAktivSetzen();
-            		story = "Vor der Tür befinden sich acht Säulen mit jeweils einem Regler, bei der sich die Ziffern von 0-9 einstellen lassen.\r\n" + 
+            		story = "Vor der Tür befinden sich acht Säulen mit jeweils einem Regler.\r\n" + 
             				"„Ein Code...“ denkst du dir und überlegst was für ein achtstelliger Code das wohl sein wird, als dir erst jetzt der Schriftzug über der Tür auffällst.\r\n" + 
             				"„Hier folgt der Gang nach unten“.\r\n" + 
-            				"\n--Gebe die Reihenfolge, in der du die Hebel betätigen willst in das Textfeld ein und klicke auf 'abschicken'.--";
+            				"\n--Gebe die Reihenfolge, in der du die Hebel betätigen willst als Zahlenfolge in das Textfeld ein und klicke auf 'abschicken'.--";
             		storyta.setText(story);
             		raum.setImage(raetsel2);
             		label1.setText("Eingabe:");
@@ -190,7 +190,7 @@ public class Main extends Application {
             	} else if(graph1.gibStandort().equals("r3") && !graph1.gibRaetselAktiv()) {
             		graph1.RaetselAktivSetzen();
             		story = "Auf der Tafel stehen Rechnungen mit Symbolen. \"Und ich habe immer gedacht Mathe hab ich dann mal nach der Schule hinter mir\" denkst du dir genervt und machst dich an die Aufgaben."
-            				+ "\n\n--Gebe die richtige Lösung in das Textfeld ein und klicke auf 'abschicken'.--";
+            				+ "\n\n--Gebe die richtige Lösung des Gleichungssystems in das Textfeld ein und klicke auf 'abschicken'.--";
             		storyta.setText(story);
             		raum.setImage(raetsel3);
             		label1.setText("Eingabe:");
@@ -203,7 +203,7 @@ public class Main extends Application {
             		tfb.setVisible(true);
             	} else if(graph1.gibStandort().equals("r4") && !graph1.gibRaetselAktiv()) {
             		graph1.RaetselAktivSetzen();
-            		story = "Nach der Untersuchung des Raumes, das in der Mitte einen Brunnen stehen hat begibst du dich zur nächsten Tür mit einem Gedicht neben an. Anscheinend ist das hier das letzte Rätsel. Doch was für ein Wort wird im Gedicht gesucht?"
+            		story = "Nach der Untersuchung des Raumes, welcher in der Mitte einen Brunnen stehen hat, begibst du dich zur nächsten Tür mit einem Gedicht auf einer daneben hängenden Plakette. Anscheinend ist das hier das letzte Rätsel. Doch was für ein Wort wird im Gedicht gesucht?"
             				+ "\n\n--Gebe die richtige Lösung in das Textfeld ein und klicke auf 'abschicken'.--";
             		storyta.setText(story);
             		raum.setImage(raetsel4);
@@ -255,7 +255,7 @@ public class Main extends Application {
            				System.out.println(score);
            			} else if (tips == 1) {
            				story = storyta.getText();
-           				storyta.setText(story +"\nHatten die Maya nicht einen Kalender? Mir einem berühmten Datum?");
+           				storyta.setText(story +"\nHatten die Maya nicht einen Kalender? Mit einem berühmten Datum?");
            				tips++;
            				score = score-1;
            				System.out.println(score);
@@ -274,7 +274,7 @@ public class Main extends Application {
            				System.out.println(score);
            			} else if (tips == 1) {
            				story = storyta.getText();
-           				storyta.setText(story +"\nwenn ich die Zeichen mal mit Buchstaben ersetze ist es dann übersichtlicher und ich kann die Gleichungen danach lösen...");
+           				storyta.setText(story +"\nwenn ich die Zeichen mal mit Buchstaben ersetze ist es übersichtlicher und ich kann die Gleichungen danach deutlich leichter lösen...");
            				tips++;
            				score = score-1;
            				System.out.println(score);
@@ -293,7 +293,7 @@ public class Main extends Application {
            				System.out.println(score);
            			} else if (tips == 1) {
            				story = storyta.getText();
-           				storyta.setText(story +"\nGold hat eine bestimmte Abkürzung im Periodensystem. Warum?");
+           				storyta.setText(story +"\nDas Wort ist auch ein Element im Periodensystem, das eine bestimmte Abkürzung hat. Warum?");
            				tips++;
            				score = score-1;
            				System.out.println(score);
@@ -368,14 +368,14 @@ public class Main extends Application {
                 			score = score+20;
                 			System.out.println(score);
                 			storyta.setText("Glückwunsch, du hast das Rätsel auf Anhieb gelöst!\nWillkommen in Raum 3!\nDu hast "+tips+" tip(s) abgerufen."
-                					+ "\n\nAuch hier befinden sich diverse alte kleinere Schätze. \"Die nehme ich mir dann auf dem Rückweg mit.\" sagst du und führst deinen Auftrag fort.\r\n" + 
+                					+ "\n\nAuch hier befinden sich diverse alte kleinere Schätze. \"Die nehme ich mir dann auf dem Rückweg mit.\" sagst du dir und führst deine Erkundung fort.\r\n" + 
                 					"Du schaffst es dich am Seil hochzuziehen und siehst eine Tafel neben der Tür.\r\n\n" + 
                 					"");
                 		} else {
                 			score = score+10;
                 			System.out.println(score);
                 			storyta.setText("Du hast " +(counter+1)+" Versuche benötigt. \nWillkommen in Raum 3!\nDu hast "+tips+" tip(s) abgerufen."
-                					+ "\nAuch hier befinden sich diverse alte kleinere Schätze. \"Die nehme ich mir dann auf dem Rückweg mit.\" sagst du und führst deinen Auftrag fort.\r\n" + 
+                					+ "\nAuch hier befinden sich diverse alte kleinere Schätze. \"Die nehme ich mir dann auf dem Rückweg mit.\" sagst du und führst deine Erkundung fort.\r\n" + 
                 					"Du schaffst es dich am Seil hochzuziehen und siehst eine Tafel neben der Tür.\r\n\n" + 
                 					"");
                 		}
@@ -412,12 +412,12 @@ public class Main extends Application {
                 			score = score+20;
                 			System.out.println(score);
                 			storyta.setText("Glückwunsch, du hast das Rätsel auf Anhieb gelöst!\nWillkommen in Raum 4!\nDu hast "+tips+" tip(s) abgerufen."
-                					+ "\n\nDu öffnest die Tür und dir fliegen plötzlich ein paar Fledermäuse entgegen. Du schreckst kurz auf und erinnerst dich, dass du schon viel schlimmere Dinge auf deinen Entdeckungstouren erlebst hast als ein paar Fledermäuse.");
+                					+ "\n\nDu öffnest die Tür, plötzlich fliegen dir ein paar Fledermäuse entgegen. Du schreckst kurz auf und erinnerst dich, dass du schon viel schlimmere Dinge auf deinen Entdeckungstouren erlebst hast als ein paar Fledermäuse.");
                 		} else {
                 			score = score+10;
                 			System.out.println(score);
                 			storyta.setText("Du hast " +(counter+1)+" Versuche benötigt. \nWillkommen in Raum 4!\nDu hast "+tips+" tip(s) abgerufen."
-                					+ "\n\nDu öffnest die Tür und dir fliegen plötzlich ein paar Fledermäuse entgegen. Du schreckst kurz auf und erinnerst dich, dass du schon viel schlimmere Dinge auf deinen Entdeckungstouren erlebst hast als ein paar Fledermäuse.");
+                					+ "\n\nDu öffnest die Tür, plötzlich fliegen dir ein paar Fledermäuse entgegen. Du schreckst kurz auf und erinnerst dich, dass du schon viel schlimmere Dinge auf deinen Entdeckungstouren erlebst hast als ein paar Fledermäuse.");
                 		}
                 		counter = 0;
                 		tips = 0;
