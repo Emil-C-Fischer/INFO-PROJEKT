@@ -155,7 +155,7 @@ public class Main extends Application {
             		story = "Als du oben bei der Pyramide angekommen bist, bemerkst du, dass die Soldaten anscheinend vergessen haben, dir die Zugangsdaten zu geben und schon weggefahren sind.\r\n" + 
             				"Vielleicht kommst du den Benutzernamen und auf das Passwort von selbst.\r\n" + 
             				"Auf den Holzkisten neben der Tür stehen einige Namen, die du als NATO-Buchstaben entschlüsselst.\r\n" + 
-            				"\"Mit diesen Buchstaben muss ich doch irgendwie auf den benutzernnamen kommen. Aber das sind nur sechs Buchstaben und der Benutzername hat acht...\" denkst du dir und überlegst weiter.\r\n" + 
+            				"\"Mit diesen Buchstaben muss ich doch irgendwie auf den Benutzernamen kommen. Aber das sind nur sechs Buchstaben und der Benutzername hat acht...\" denkst du dir und überlegst weiter.\r\n" + 
             				"\n--Gebe die Lösung in das Textfeld ein und klicke auf 'abschicken'.--";
             		storyta.setText(story);
             		raum.setImage(raetsel1);
