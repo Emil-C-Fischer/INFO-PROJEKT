@@ -144,8 +144,8 @@ public class Main extends Application {
         //------------------SPIELLOGIK------------------//
         
         btn1.setText("zum Eingang");
-        storyta.setText("Du wurdest vom US-Milit&aumlr beauftragt, im Parque National El Mirador in Guatemala einen vor kurzem entdeckten Mayatempel zu erforschen.\r\n" + 
-        		"Ein paar Soldaten haben dich vor der Entdeckung abgesetzt und teilen dir mit, dass sie den Eingang der Ruine abgesperrt haben, damit Zivilisten hier kein dummes Zeug machen können.\r\n" + 
+        storyta.setText("Du wurdest vom US-Milit\u00e4r beauftragt, im Parque National El Mirador in Guatemala einen vor kurzem entdeckten Mayatempel zu erforschen.\r\n" + 
+        		"Ein paar Soldaten haben dich vor der Entdeckung abgesetzt und teilen dir mit, dass sie den Eingang der Ruine abgesperrt haben, damit Zivilisten hier kein dummes Zeug machen k\u00f6nnen.\r\n" + 
         		"");
         
         btn1.setOnAction(new EventHandler<ActionEvent>() {
@@ -154,9 +154,9 @@ public class Main extends Application {
             		graph1.RaetselAktivSetzen();
             		story = "Als du oben bei der Pyramide angekommen bist, bemerkst du, dass die Soldaten anscheinend vergessen haben, dir die Zugangsdaten zu geben und schon weggefahren sind.\r\n" + 
             				"Vielleicht kommst du den Benutzernamen und auf das Passwort von selbst.\r\n" + 
-            				"Auf den Holzkisten neben der Tür stehen einige Namen, die du als NATO-Buchstaben entschlüsselst.\r\n" + 
-            				"\"Mit diesen Buchstaben muss ich doch irgendwie auf den Benutzernamen kommen. Aber das sind nur sechs Buchstaben und der Benutzername hat acht...\" denkst du dir und überlegst weiter.\r\n" + 
-            				"\n--Gebe die Lösung in das Textfeld ein und klicke auf 'abschicken'.--";
+            				"Auf den Holzkisten neben der T\u00fcr stehen einige Namen, die du als NATO-Buchstaben entschl\u00fcsselst.\r\n" + 
+            				"\"Mit diesen Buchstaben muss ich doch irgendwie auf den Benutzernamen kommen. Aber das sind nur sechs Buchstaben und der Benutzername hat acht...\" denkst du dir und \u00fcberlegst weiter.\r\n" + 
+            				"\n--Gebe die L\u00f6sung in das Textfeld ein und klicke auf 'abschicken'.--";
             		storyta.setText(story);
             		raum.setImage(raetsel1);
             		label1.setText("Benutzername:");
@@ -173,10 +173,10 @@ public class Main extends Application {
             		tfb.setVisible(true);
             	} else if(graph1.gibStandort().equals("r2") && !graph1.gibRaetselAktiv()) {
             		graph1.RaetselAktivSetzen();
-            		story = "Vor der Tür befinden sich acht Säulen mit jeweils einem Regler.\r\n" + 
-            				"„Ein Code...“ denkst du dir und überlegst was für ein achtstelliger Code das wohl sein wird, als dir erst jetzt der Schriftzug über der Tür auffällst.\r\n" + 
+            		story = "Vor der T\u00fcr befinden sich acht S\u00e4ulen mit jeweils einem Regler.\r\n" + 
+            				"„Ein Code...“ denkst du dir und \u00fcberlegst was für ein achtstelliger Code das wohl sein wird, als dir erst jetzt der Schriftzug über der T\u00fcr auff\u00e4llst.\r\n" + 
             				"„Hier folgt der Gang nach unten“.\r\n" + 
-            				"\n--Gebe die Reihenfolge, in der du die Hebel betätigen willst als Zahlenfolge in das Textfeld ein und klicke auf 'abschicken'.--";
+            				"\n--Gebe die Reihenfolge, in der du die Hebel bet\u00e4tigen willst als Zahlenfolge in das Textfeld ein und klicke auf 'abschicken'.--";
             		storyta.setText(story);
             		raum.setImage(raetsel2);
             		label1.setText("Eingabe:");
@@ -190,7 +190,7 @@ public class Main extends Application {
             	} else if(graph1.gibStandort().equals("r3") && !graph1.gibRaetselAktiv()) {
             		graph1.RaetselAktivSetzen();
             		story = "Auf der Tafel stehen Rechnungen mit Symbolen. \"Und ich habe immer gedacht Mathe hab ich dann mal nach der Schule hinter mir\" denkst du dir genervt und machst dich an die Aufgaben."
-            				+ "\n\n--Gebe die richtige Lösung des Gleichungssystems in das Textfeld ein und klicke auf 'abschicken'.--";
+            				+ "\n\n--Gebe die richtige L\u00f6sung des Gleichungssystems in das Textfeld ein und klicke auf 'abschicken'.--";
             		storyta.setText(story);
             		raum.setImage(raetsel3);
             		label1.setText("Eingabe:");
@@ -203,8 +203,8 @@ public class Main extends Application {
             		tfb.setVisible(true);
             	} else if(graph1.gibStandort().equals("r4") && !graph1.gibRaetselAktiv()) {
             		graph1.RaetselAktivSetzen();
-            		story = "Nach der Untersuchung des Raumes, welcher in der Mitte einen Brunnen stehen hat, begibst du dich zur nächsten Tür mit einem Gedicht auf einer daneben hängenden Plakette. Anscheinend ist das hier das letzte Rätsel. Doch was für ein Wort wird im Gedicht gesucht?"
-            				+ "\n\n--Gebe die richtige Lösung in das Textfeld ein und klicke auf 'abschicken'.--";
+            		story = "Nach der Untersuchung des Raumes, welcher in der Mitte einen Brunnen stehen hat, begibst du dich zur n\u00e4chsten T\u00fcr mit einem Gedicht auf einer daneben h\u00e4ngenden Plakette. Anscheinend ist das hier das letzte R\u00e4tsel. Doch was f\u00fcr ein Wort wird im Gedicht gesucht?"
+            				+ "\n\n--Gebe die richtige L\u00f6sung in das Textfeld ein und klicke auf 'abschicken'.--";
             		storyta.setText(story);
             		raum.setImage(raetsel4);
             		label1.setText("Eingabe:");
@@ -224,7 +224,7 @@ public class Main extends Application {
             	if(graph1.gibStandort().equals("r1") && graph1.gibRaetselAktiv()) {
             		if(tips == 0) {
            				story = storyta.getText();
-           				storyta.setText(story +"\nWer ist nochmal für die US-Streitkräfte zuständig?");
+           				storyta.setText(story +"\nWer ist nochmal für die US-Streitkr\u00e4fte zuständig?");
            				tips++;
            				score = score-1;
            				System.out.println(score);
@@ -242,26 +242,26 @@ public class Main extends Application {
            				System.out.println(score);
            			} else if (tips <= 3) {
            				story = storyta.getText();
-           				storyta.setText(story +"\nDu Dödel! mehr Tips gibs nicht!");
+           				storyta.setText(story +"\nDu D\u00f6del! mehr Tips gibs nicht!");
            				score = score-1;
            				System.out.println(score);
            			}
             	} else if(graph1.gibStandort().equals("r2") && graph1.gibRaetselAktiv()) {
            			if(tips == 0) {
             			story = storyta.getText();
-           				storyta.setText(story +"\nVielleicht lässt sich aus den Zahlen ja ein Datum bilden.");
+           				storyta.setText(story +"\nVielleicht l\u00e4sst sich aus den Zahlen ja ein Datum bilden.");
            				tips++;
            				score = score-1;
            				System.out.println(score);
            			} else if (tips == 1) {
            				story = storyta.getText();
-           				storyta.setText(story +"\nHatten die Maya nicht einen Kalender? Mit einem berühmten Datum?");
+           				storyta.setText(story +"\nHatten die Maya nicht einen Kalender? Mit einem ber\u00fchmten Datum?");
            				tips++;
            				score = score-1;
            				System.out.println(score);
            			} else if (tips <= 2) {
            				story = storyta.getText();
-           				storyta.setText(story +"\nDu Dödel! mehr Tips gibs nicht!");
+           				storyta.setText(story +"\nDu D\u00f6del! mehr Tips gibs nicht!");
            				score = score-1;
            				System.out.println(score);
            			}
@@ -274,13 +274,13 @@ public class Main extends Application {
            				System.out.println(score);
            			} else if (tips == 1) {
            				story = storyta.getText();
-           				storyta.setText(story +"\nwenn ich die Zeichen mal mit Buchstaben ersetze ist es übersichtlicher und ich kann die Gleichungen danach deutlich leichter lösen...");
+           				storyta.setText(story +"\nwenn ich die Zeichen mal mit Buchstaben ersetze ist es \u00fcbersichtlicher und ich kann die Gleichungen danach deutlich leichter l\u00f6sen...");
            				tips++;
            				score = score-1;
            				System.out.println(score);
             		} else if (tips <= 2) {
             			story = storyta.getText();
-           				storyta.setText(story +"\nDu Dödel! mehr Tips gibs nicht!");
+           				storyta.setText(story +"\nDu D\u00f6del! mehr Tips gibs nicht!");
            				score = score-1;
            				System.out.println(score);
            			}
@@ -293,13 +293,13 @@ public class Main extends Application {
            				System.out.println(score);
            			} else if (tips == 1) {
            				story = storyta.getText();
-           				storyta.setText(story +"\nDas Wort ist auch ein Element im Periodensystem, das eine bestimmte Abkürzung hat. Warum?");
+           				storyta.setText(story +"\nDas Wort ist auch ein Element im Periodensystem, das eine bestimmte Abk/u00fcrzung hat. Warum?");
            				tips++;
            				score = score-1;
            				System.out.println(score);
            			} else if (tips <= 2) {
            				story = storyta.getText();
-           				storyta.setText(story +"\nDu Dödel! mehr Tips gibs nicht!");
+           				storyta.setText(story +"\nDu D\u00f6del! mehr Tips gibs nicht!");
            				score = score-1;
            				System.out.println(score);
            			}
@@ -328,23 +328,23 @@ public class Main extends Application {
                 		if (counter == 0) {
                 			score = score+20;
                 			System.out.println(score);
-                			storyta.setText("Glückwunsch, du hast das Rätsel auf Anhieb gelöst!\nWillkommen in Raum 2!\nDu hast "+tips+" tip(s) abgerufen."
-                					+ "\n\nEndlich betrittst den Tempel und erblickst diverse alte Vasen und Skulpturen. Doch die interessieren dich nicht. Denn deine Neugier zwingt dich schon zur nächsten Tür, die sich aber nicht so einfach öffnen lässt.");
+                			storyta.setText("Gl\u00fcckwunsch, du hast das R\u00e4tsel auf Anhieb gel\u00f6st!\nWillkommen in Raum 2!\nDu hast "+tips+" Tip(s) abgerufen."
+                					+ "\n\nEndlich betrittst den Tempel und erblickst diverse alte Vasen und Skulpturen. Doch die interessieren dich nicht. Denn deine Neugier zwingt dich schon zur n\u00e4chsten T\u00fcr, die sich aber nicht so einfach \u00f6ffnen l\u00e4sst.");
                 		} else {
                 			score = score+10;
                 			System.out.println(score);
-                			storyta.setText("Du hast " +(counter+1)+" Versuche benötigt. \nWillkommen in Raum 2!\nDu hast "+tips+" tip(s) abgerufen."
-                					+ "\n\nEndlich betrittst den Tempel und erblickst diverse alte Vasen und Skulpturen. Doch die interessieren dich nicht. Denn deine Neugier zwingt dich schon zur nächsten Tür, die sich aber nicht so einfach öffnen lässt.");
+                			storyta.setText("Du hast " +(counter+1)+" Versuche ben\u00f6tigt. \nWillkommen in Raum 2!\nDu hast "+tips+" Tip(s) abgerufen."
+                					+ "\n\nEndlich betrittst den Tempel und erblickst diverse alte Vasen und Skulpturen. Doch die interessieren dich nicht. Denn deine Neugier zwingt dich schon zur n\u00e4chsten T\u00fcr, die sich aber nicht so einfach \u00f6ffnen l\u00e4sst.");
                 		}
                 		counter = 0;
                 		tips = 0;
-                		btn1.setText("zur Türe");
+                		btn1.setText("zur T\u00fcre");
                 		btn2.setText("---");
                 		btn2.setVisible(false);
                 		btn1.setVisible(true);
         			} else {
         				story = storyta.getText();
-        				storyta.setText(story + "\n-----Deine Lösung war leider falsch. probiere es noch einmal!-----");
+        				storyta.setText(story + "\n-----Deine L\u00f6sung war leider falsch. probiere es noch einmal!-----");
         				tf1.clear();
         				tf2.clear();
         				counter ++;
@@ -367,16 +367,16 @@ public class Main extends Application {
                 		if (counter == 0) {
                 			score = score+20;
                 			System.out.println(score);
-                			storyta.setText("Glückwunsch, du hast das Rätsel auf Anhieb gelöst!\nWillkommen in Raum 3!\nDu hast "+tips+" tip(s) abgerufen."
-                					+ "\n\nAuch hier befinden sich diverse alte kleinere Schätze. \"Die nehme ich mir dann auf dem Rückweg mit.\" sagst du dir und führst deine Erkundung fort.\r\n" + 
-                					"Du schaffst es dich am Seil hochzuziehen und siehst eine Tafel neben der Tür.\r\n\n" + 
+                			storyta.setText("Gl\u00fcckwunsch, du hast das R\u00e4tsel auf Anhieb gel\u00f6st!\nWillkommen in Raum 3!\nDu hast "+tips+" Tip(s) abgerufen."
+                					+ "\n\nAuch hier befinden sich diverse alte kleinere Sch\u00e4tze. \"Die nehme ich mir dann auf dem R\u00fcckweg mit.\" sagst du dir und f\u00fchrst deine Erkundung fort.\r\n" + 
+                					"Du schaffst es dich am Seil hochzuziehen und siehst eine Tafel neben der T\u00fcr.\r\n\n" + 
                 					"");
                 		} else {
                 			score = score+10;
                 			System.out.println(score);
-                			storyta.setText("Du hast " +(counter+1)+" Versuche benötigt. \nWillkommen in Raum 3!\nDu hast "+tips+" tip(s) abgerufen."
-                					+ "\nAuch hier befinden sich diverse alte kleinere Schätze. \"Die nehme ich mir dann auf dem Rückweg mit.\" sagst du und führst deine Erkundung fort.\r\n" + 
-                					"Du schaffst es dich am Seil hochzuziehen und siehst eine Tafel neben der Tür.\r\n\n" + 
+                			storyta.setText("Du hast " +(counter+1)+" Versuche ben\u00f6tigt. \nWillkommen in Raum 3!\nDu hast "+tips+" Tip(s) abgerufen."
+                					+ "\nAuch hier befinden sich diverse alte kleinere Sch\u00e4tze. \"Die nehme ich mir dann auf dem R\u00fcckweg mit.\" sagst du und f\u00fchrst deine Erkundung fort.\r\n" + 
+                					"Du schaffst es dich am Seil hochzuziehen und siehst eine Tafel neben der T\u00fcr.\r\n\n" + 
                 					"");
                 		}
                 		counter = 0;
@@ -388,7 +388,7 @@ public class Main extends Application {
                 		tfb.setVisible(false);
         			} else {
         				story = storyta.getText();
-        				storyta.setText(story +"\n-----Deine Lösung war leider falsch. probiere es noch einmal!-----");
+        				storyta.setText(story +"\n-----Deine L\u00f6sung war leider falsch. probiere es noch einmal!-----");
            				tf1.clear();
         				tf2.clear();
         				counter ++;
@@ -411,13 +411,13 @@ public class Main extends Application {
                 		if (counter ==0 ) {
                 			score = score+20;
                 			System.out.println(score);
-                			storyta.setText("Glückwunsch, du hast das Rätsel auf Anhieb gelöst!\nWillkommen in Raum 4!\nDu hast "+tips+" tip(s) abgerufen."
-                					+ "\n\nDu öffnest die Tür, plötzlich fliegen dir ein paar Fledermäuse entgegen. Du schreckst kurz auf und erinnerst dich, dass du schon viel schlimmere Dinge auf deinen Entdeckungstouren erlebst hast als ein paar Fledermäuse.");
+                			storyta.setText("Gl\u00fcckwunsch, du hast das R\u00e4tsel auf Anhieb gel\u00f6st!\nWillkommen in Raum 4!\nDu hast "+tips+" Tip(s) abgerufen."
+                					+ "\n\nDu \u00f6ffnest die T\u00fcr, pl\u00f6tzlich fliegen dir ein paar Flederm\u00e4use entgegen. Du schreckst kurz auf und erinnerst dich, dass du schon viel schlimmere Dinge auf deinen Entdeckungstouren erlebst hast als ein paar Flederm\u00e4use.");
                 		} else {
                 			score = score+10;
                 			System.out.println(score);
-                			storyta.setText("Du hast " +(counter+1)+" Versuche benötigt. \nWillkommen in Raum 4!\nDu hast "+tips+" tip(s) abgerufen."
-                					+ "\n\nDu öffnest die Tür, plötzlich fliegen dir ein paar Fledermäuse entgegen. Du schreckst kurz auf und erinnerst dich, dass du schon viel schlimmere Dinge auf deinen Entdeckungstouren erlebst hast als ein paar Fledermäuse.");
+                			storyta.setText("Du hast " +(counter+1)+" Versuche ben\u00f6tigt. \nWillkommen in Raum 4!\nDu hast "+tips+" Tip(s) abgerufen."
+                					+ "\n\nDu \u00f6ffnest die Tür, pl\u00f6tzlich fliegen dir ein paar Flederm\u00e4use entgegen. Du schreckst kurz auf und erinnerst dich, dass du schon viel schlimmere Dinge auf deinen Entdeckungstouren erlebst hast als ein paar Flederm\u00e4use.");
                 		}
                 		counter = 0;
                 		tips = 0;
@@ -428,7 +428,7 @@ public class Main extends Application {
                 		tfb.setVisible(false);
         			} else {
         				story = storyta.getText();
-        				storyta.setText(story +"\n-----Deine Lösung war leider falsch. probiere es noch einmal!-----");
+        				storyta.setText(story +"\n-----Deine L\u00f6sung war leider falsch. probiere es noch einmal!-----");
            				tf1.clear();
         				tf2.clear();
         				counter ++;
@@ -452,18 +452,18 @@ public class Main extends Application {
                   		tf2.clear();
                   		if (counter == 0) {
                   			score = score+20;
-                			storyta.setText("Willkommen in Raum 5, Du hast das Spiel durchgespielt!!\nGlückwunsch, du hast das Rätsel auf Anhieb gelöst!\nDu hast "+tips+" tip(s) abgerufen. \n\nDein Score ist "+score+" von maximal 80 Punkten.\n\nNachdem du das letzte Rätsel erfolgreich gelöst hast, gelangst du in einen Raum voller Schätze. Gold, Edelsteine und Diamanten zieren den Boden. Du beginnst zügig deine Taschen mit den kostbaren Gegenständen vollzustopfen, sodass diese vor Reichtümern nur so überquellen. Immer mehr und mehr packst du in deine Beutel, bis du plötzlich ein dumpfes Geräusch hinter dir hörst. Als du dich erschreckt umdrehst, siehst du wie sich das Tor, durch das du die Schatzkammer betreten hast, sich beginnt zu schließen. Zeitgleich beginnen die großen Säulen in der Kammer zu bröckeln und drohen sichtlich jeden Moment einzubrechen. \r\n" + 
-                					"Hastig packst du den mit Gold und Juwelen vollbepackten Beutel und sprintest zu der großen Tür, die den einzigen Ausweg aus diesem Raum zu verschließen droht. Doch du bist zu spät. Direkt vor deiner Nase schließt diese sich mit einem lauten Knarzen und du bist eingesperrt, umgeben von teuren Edelsteinen, in einer Kammer die in sich zusammenfällt. Vergeblich trittst und hämmerst du gegen das Tor, versuchst es irgendwie zu öffnen, doch alle Bemühungen helfen nichts. \r\n" + 
-                					"Von der Decke fallen inzwischen immer größere Steine und du weißt, dass bald alles unter dem massiven Fels begraben sein wird, doch es gibt keinen Weg dem ganzen zu entkommen. Aber als plötzlich eine der großen Säulen in sich zusammenbricht und unter lautem Krach auf den Boden aufschlägt, entsteht dort ein Loch, das wohl in eine tiefergelegene Kammer führt, die von hieraus nicht zugänglich war. Ohne lang zu zögern packst du deine Schätze und springst in das, von Dunkelheit gefüllte, Loch, bevor einer der Felsen dich begräbt.\r\n" + 
-                					"Aber Nanu – Was ruft unser Protagonist nur während seinem Sturz in den Tod? –„DIE CREDITS!“. Ach ja, stimmt, die Credits! Die hab ich vor lauter Programmieren völlig vergessen... Hier sind sie: Ein paar Bildelemente stammen von flaticons.com, und geschrieben wurde dieses tolle Spiel von Florian, Rintschen, Johannes und Emil im Rahmen eines Informatikprojekts der Q11 2018/19 am Gymnasium Wendelstein. Vielen dank fürs spielen!!!\r\n" + 
+                			storyta.setText("Willkommen in Raum 5, Du hast das Spiel durchgespielt!!\nGl\u00fcckwunsch, du hast das R\u00e4tsel auf Anhieb gel\u00f6st!\nDu hast "+tips+" Tip(s) abgerufen. \n\nDein Score ist "+score+" von maximal 80 Punkten.\n\nNachdem du das letzte R\u00e4tsel erfolgreich gel\u00f6st hast, gelangst du in einen Raum voller Sch\u00e4tze. Gold, Edelsteine und Diamanten zieren den Boden. Du beginnst z\u00fcgig deine Taschen mit den kostbaren Gegenst\u00e4nden vollzustopfen, sodass diese vor Reicht\u00fcmern nur so \u00fcberquellen. Immer mehr und mehr packst du in deine Beutel, bis du pl\u00f6tzlich ein dumpfes Ger\u00e4usch hinter dir h\u00f6rst. Als du dich erschreckt umdrehst, siehst du wie sich das Tor, durch das du die Schatzkammer betreten hast, sich beginnt zu schließen. Zeitgleich beginnen die großen S\u00e4ulen in der Kammer zu br\u00f6ckeln und drohen sichtlich jeden Moment einzubrechen. \r\n" + 
+                					"Hastig packst du den mit Gold und Juwelen vollbepackten Beutel und sprintest zu der großen T\u00fcr, die den einzigen Ausweg aus diesem Raum zu verschließen droht. Doch du bist zu sp\u00e4t. Direkt vor deiner Nase schließt diese sich mit einem lauten Knarzen und du bist eingesperrt, umgeben von teuren Edelsteinen, in einer Kammer die in sich zusammenf\u00e4llt. Vergeblich trittst und h\u00e4mmerst du gegen das Tor, versuchst es irgendwie zu \u00f6ffnen, doch alle Bem\u00fchungen helfen nichts. \r\n" + 
+                					"Von der Decke fallen inzwischen immer gr\u00f6ßere Steine und du weißt, dass bald alles unter dem massiven Fels begraben sein wird, doch es gibt keinen Weg dem ganzen zu entkommen. Aber als pl\u00f6tzlich eine der großen S\u00e4ulen in sich zusammenbricht und unter lautem Krach auf den Boden aufschl\u00e4gt, entsteht dort ein Loch, das wohl in eine tiefergelegene Kammer f\u00fchrt, die von hieraus nicht zug\u00e4nglich war. Ohne lang zu z\u00f6gern packst du deine Sch\u00e4tze und springst in das, von Dunkelheit gef\u00fcllte, Loch, bevor einer der Felsen dich begr\u00e4bt.\r\n" + 
+                					"Aber Nanu – Was ruft unser Protagonist nur w\u00e4hrend seinem Sturz in den Tod? –„DIE CREDITS!“. Ach ja, stimmt, die Credits! Die hab ich vor lauter Programmieren v\u00f6llig vergessen... Hier sind sie: Ein paar Bildelemente stammen von flaticons.com, und geschrieben wurde dieses tolle Spiel von Florian, Rintschen, Johannes und Emil im Rahmen eines Informatikprojekts der Q11 2018/19 am Gymnasium Wendelstein. Vielen dank f\u00fcrs spielen!!!\r\n" + 
                 					"");
                 			System.out.println(score);
                 		} else {
                 			score = score+10;
-                			storyta.setText("Du hast " +(counter+1)+" Versuche benötigt. \nWillkommen in Raum 5, Du hast das Spiel durchgespielt!!\nDu hast "+tips+" tip(s) abgerufen.\n\nDein Score ist "+score+" von maximal 80 Punkten.\n\nNachdem du das letzte Rätsel erfolgreich gelöst hast, gelangst du in einen Raum voller Schätze. Gold, Edelsteine und Diamanten zieren den Boden. Du beginnst zügig deine Taschen mit den kostbaren Gegenständen vollzustopfen, sodass diese vor Reichtümern nur so überquellen. Immer mehr und mehr packst du in deine Beutel, bis du plötzlich ein dumpfes Geräusch hinter dir hörst. Als du dich erschreckt umdrehst, siehst du wie sich das Tor, durch das du die Schatzkammer betreten hast, sich beginnt zu schließen. Zeitgleich beginnen die großen Säulen in der Kammer zu bröckeln und drohen sichtlich jeden Moment einzubrechen. \r\n" + 
-                					"Hastig packst du den mit Gold und Juwelen vollbepackten Beutel und sprintest zu der großen Tür, die den einzigen Ausweg aus diesem Raum zu verschließen droht. Doch du bist zu spät. Direkt vor deiner Nase schließt diese sich mit einem lauten Knarzen und du bist eingesperrt, umgeben von teuren Edelsteinen, in einer Kammer die in sich zusammenfällt. Vergeblich trittst und hämmerst du gegen das Tor, versuchst es irgendwie zu öffnen, doch alle Bemühungen helfen nichts. \r\n" + 
-                				    "Von der Decke fallen inzwischen immer größere Steine und du weißt, dass bald alles unter dem massiven Fels begraben sein wird, doch es gibt keinen Weg dem ganzen zu entkommen. Aber als plötzlich eine der großen Säulen in sich zusammenbricht und unter lautem Krach auf den Boden aufschlägt, entsteht dort ein Loch, das wohl in eine tiefergelegene Kammer führt, die von hieraus nicht zugänglich war. Ohne lang zu zögern packst du deine Schätze und springst in das, von Dunkelheit gefüllte, Loch, bevor einer der Felsen dich begräbt.\r\n" + 
-                				    "Aber Nanu – Was ruft unser Protagonist nur während seinem Sturz in den Tod? –„DIE CREDITS!“. Ach ja, stimmt, die Credits! Die hab ich vor lauter Programmieren völlig vergessen... Hier sind sie: Ein paar Bildelemente stammen von flaticons.com, und geschrieben wurde dieses tolle Spiel von Florian, Rintschen, Johannes und Emil im Rahmen eines Informatikprojekts der Q11 2018/19 am Gymnasium Wendelstein. Vielen dank fürs spielen!!!\r\n" + 
+                			storyta.setText("Du hast " +(counter+1)+" Versuche ben\u00f6tigt. \nWillkommen in Raum 5, Du hast das Spiel durchgespielt!!\nDu hast "+tips+" Tip(s) abgerufen.\n\nDein Score ist "+score+" von maximal 80 Punkten.\n\nNachdem du das letzte R\u00e4tsel erfolgreich gel\u00f6st hast, gelangst du in einen Raum voller Sch\u00e4tze. Gold, Edelsteine und Diamanten zieren den Boden. Du beginnst z\u00fcgig deine Taschen mit den kostbaren Gegenst\u00e4nden vollzustopfen, sodass diese vor Reicht\u00fcmern nur so \u00fcberquellen. Immer mehr und mehr packst du in deine Beutel, bis du pl\u00f6tzlich ein dumpfes Ger\u00e4usch hinter dir h\u00f6rst. Als du dich erschreckt umdrehst, siehst du wie sich das Tor, durch das du die Schatzkammer betreten hast, sich beginnt zu schließen. Zeitgleich beginnen die großen S\u00e4ulen in der Kammer zu br\u00f6ckeln und drohen sichtlich jeden Moment einzubrechen. \r\n" + 
+                					"Hastig packst du den mit Gold und Juwelen vollbepackten Beutel und sprintest zu der großen T\u00fcr, die den einzigen Ausweg aus diesem Raum zu verschließen droht. Doch du bist zu sp\u00e4t. Direkt vor deiner Nase schließt diese sich mit einem lauten Knarzen und du bist eingesperrt, umgeben von teuren Edelsteinen, in einer Kammer die in sich zusammenf\u00e4llt. Vergeblich trittst und h\u00e4mmerst du gegen das Tor, versuchst es irgendwie zu \u00f6ffnen, doch alle Bem\u00fchungen helfen nichts. \r\n" + 
+                				    "Von der Decke fallen inzwischen immer gr\u00f6ßere Steine und du weißt, dass bald alles unter dem massiven Fels begraben sein wird, doch es gibt keinen Weg dem ganzen zu entkommen. Aber als pl\u00f6tzlich eine der großen S\u00e4ulen in sich zusammenbricht und unter lautem Krach auf den Boden aufschl\u00e4gt, entsteht dort ein Loch, das wohl in eine tiefergelegene Kammer f\u00fchrt, die von hieraus nicht zug\u00e4nglich war. Ohne lang zu z\u00f6gern packst du deine Sch\u00e4tze und springst in das, von Dunkelheit gef\u00fcllte, Loch, bevor einer der Felsen dich begr\u00e4bt.\r\n" + 
+                				    "Aber Nanu – Was ruft unser Protagonist nur w\u00e4hrend seinem Sturz in den Tod? –„DIE CREDITS!“. Ach ja, stimmt, die Credits! Die hab ich vor lauter Programmieren v\u00f6llig vergessen... Hier sind sie: Ein paar Bildelemente stammen von flaticons.com, und geschrieben wurde dieses tolle Spiel von Florian, Rintschen, Johannes und Emil im Rahmen eines Informatikprojekts der Q11 2018/19 am Gymnasium Wendelstein. Vielen dank fürs spielen!!!\r\n" + 
                 					"");
                 			System.out.println(score);
                 		}
