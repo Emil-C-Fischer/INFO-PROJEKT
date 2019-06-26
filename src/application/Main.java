@@ -144,7 +144,7 @@ public class Main extends Application {
         //------------------SPIELLOGIK------------------//
         
         btn1.setText("zum Eingang");
-        storyta.setText("Du wurdest vom US-Militär beauftragt, im Parque National El Mirador in Guatemala einen vor kurzem entdeckten Mayatempel zu erforschen.\r\n" + 
+        storyta.setText("Du wurdest vom US-Milit&aumlr beauftragt, im Parque National El Mirador in Guatemala einen vor kurzem entdeckten Mayatempel zu erforschen.\r\n" + 
         		"Ein paar Soldaten haben dich vor der Entdeckung abgesetzt und teilen dir mit, dass sie den Eingang der Ruine abgesperrt haben, damit Zivilisten hier kein dummes Zeug machen können.\r\n" + 
         		"");
         
