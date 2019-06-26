@@ -42,7 +42,7 @@ public class Main extends Application {
 
         Scene scene = new Scene(root, 1880, 950);
 
-        primaryStage.setTitle("The Tales of El Komutiko");
+        primaryStage.setTitle("The Tales of El Komputiko");
         primaryStage.setScene(scene);
         primaryStage.show();
     	
