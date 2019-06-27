@@ -174,8 +174,8 @@ public class Main extends Application {
             	} else if(graph1.gibStandort().equals("r2") && !graph1.gibRaetselAktiv()) {
             		graph1.RaetselAktivSetzen();
             		story = "Vor der T\u00fcr befinden sich acht S\u00e4ulen mit jeweils einem Regler.\r\n" + 
-            				"„Ein Code...“ denkst du dir und \u00fcberlegst was für ein achtstelliger Code das wohl sein wird, als dir erst jetzt der Schriftzug über der T\u00fcr auff\u00e4llst.\r\n" + 
-            				"„Hier folgt der Gang nach unten“.\r\n" + 
+            				"ï¿½Ein Code...ï¿½ denkst du dir und \u00fcberlegst was fï¿½r ein achtstelliger Code das wohl sein wird, als dir erst jetzt der Schriftzug ï¿½ber der T\u00fcr auff\u00e4llst.\r\n" + 
+            				"ï¿½Hier folgt der Gang nach untenï¿½.\r\n" + 
             				"\n--Gebe die Reihenfolge, in der du die Hebel bet\u00e4tigen willst als Zahlenfolge in das Textfeld ein und klicke auf 'abschicken'.--";
             		storyta.setText(story);
             		raum.setImage(raetsel2);
@@ -187,6 +187,7 @@ public class Main extends Application {
             		tfb.setVisible(true);
             		btn1.setText("---");
             		btn2.setText("Tip");
+            		btn2.setText("Text");
             	} else if(graph1.gibStandort().equals("r3") && !graph1.gibRaetselAktiv()) {
             		graph1.RaetselAktivSetzen();
             		story = "Auf der Tafel stehen Rechnungen mit Symbolen. \"Und ich habe immer gedacht Mathe hab ich dann mal nach der Schule hinter mir\" denkst du dir genervt und machst dich an die Aufgaben."
@@ -224,7 +225,7 @@ public class Main extends Application {
             	if(graph1.gibStandort().equals("r1") && graph1.gibRaetselAktiv()) {
             		if(tips == 0) {
            				story = storyta.getText();
-           				storyta.setText(story +"\nWer ist nochmal für die US-Streitkr\u00e4fte zuständig?");
+           				storyta.setText(story +"\nWer ist nochmal fï¿½r die US-Streitkr\u00e4fte zustï¿½ndig?");
            				tips++;
            				score = score-1;
            				System.out.println(score);
@@ -417,7 +418,7 @@ public class Main extends Application {
                 			score = score+10;
                 			System.out.println(score);
                 			storyta.setText("Du hast " +(counter+1)+" Versuche ben\u00f6tigt. \nWillkommen in Raum 4!\nDu hast "+tips+" Tip(s) abgerufen."
-                					+ "\n\nDu \u00f6ffnest die Tür, pl\u00f6tzlich fliegen dir ein paar Flederm\u00e4use entgegen. Du schreckst kurz auf und erinnerst dich, dass du schon viel schlimmere Dinge auf deinen Entdeckungstouren erlebst hast als ein paar Flederm\u00e4use.");
+                					+ "\n\nDu \u00f6ffnest die Tï¿½r, pl\u00f6tzlich fliegen dir ein paar Flederm\u00e4use entgegen. Du schreckst kurz auf und erinnerst dich, dass du schon viel schlimmere Dinge auf deinen Entdeckungstouren erlebst hast als ein paar Flederm\u00e4use.");
                 		}
                 		counter = 0;
                 		tips = 0;
@@ -452,18 +453,18 @@ public class Main extends Application {
                   		tf2.clear();
                   		if (counter == 0) {
                   			score = score+20;
-                			storyta.setText("Willkommen in Raum 5, Du hast das Spiel durchgespielt!!\nGl\u00fcckwunsch, du hast das R\u00e4tsel auf Anhieb gel\u00f6st!\nDu hast "+tips+" Tip(s) abgerufen. \n\nDein Score ist "+score+" von maximal 80 Punkten.\n\nNachdem du das letzte R\u00e4tsel erfolgreich gel\u00f6st hast, gelangst du in einen Raum voller Sch\u00e4tze. Gold, Edelsteine und Diamanten zieren den Boden. Du beginnst z\u00fcgig deine Taschen mit den kostbaren Gegenst\u00e4nden vollzustopfen, sodass diese vor Reicht\u00fcmern nur so \u00fcberquellen. Immer mehr und mehr packst du in deine Beutel, bis du pl\u00f6tzlich ein dumpfes Ger\u00e4usch hinter dir h\u00f6rst. Als du dich erschreckt umdrehst, siehst du wie sich das Tor, durch das du die Schatzkammer betreten hast, sich beginnt zu schließen. Zeitgleich beginnen die großen S\u00e4ulen in der Kammer zu br\u00f6ckeln und drohen sichtlich jeden Moment einzubrechen. \r\n" + 
-                					"Hastig packst du den mit Gold und Juwelen vollbepackten Beutel und sprintest zu der großen T\u00fcr, die den einzigen Ausweg aus diesem Raum zu verschließen droht. Doch du bist zu sp\u00e4t. Direkt vor deiner Nase schließt diese sich mit einem lauten Knarzen und du bist eingesperrt, umgeben von teuren Edelsteinen, in einer Kammer die in sich zusammenf\u00e4llt. Vergeblich trittst und h\u00e4mmerst du gegen das Tor, versuchst es irgendwie zu \u00f6ffnen, doch alle Bem\u00fchungen helfen nichts. \r\n" + 
-                					"Von der Decke fallen inzwischen immer gr\u00f6ßere Steine und du weißt, dass bald alles unter dem massiven Fels begraben sein wird, doch es gibt keinen Weg dem ganzen zu entkommen. Aber als pl\u00f6tzlich eine der großen S\u00e4ulen in sich zusammenbricht und unter lautem Krach auf den Boden aufschl\u00e4gt, entsteht dort ein Loch, das wohl in eine tiefergelegene Kammer f\u00fchrt, die von hieraus nicht zug\u00e4nglich war. Ohne lang zu z\u00f6gern packst du deine Sch\u00e4tze und springst in das, von Dunkelheit gef\u00fcllte, Loch, bevor einer der Felsen dich begr\u00e4bt.\r\n" + 
-                					"Aber Nanu – Was ruft unser Protagonist nur w\u00e4hrend seinem Sturz in den Tod? –„DIE CREDITS!“. Ach ja, stimmt, die Credits! Die hab ich vor lauter Programmieren v\u00f6llig vergessen... Hier sind sie: Ein paar Bildelemente stammen von flaticons.com, und geschrieben wurde dieses tolle Spiel von Florian, Rintschen, Johannes und Emil im Rahmen eines Informatikprojekts der Q11 2018/19 am Gymnasium Wendelstein. Vielen dank f\u00fcrs spielen!!!\r\n" + 
+                			storyta.setText("Willkommen in Raum 5, Du hast das Spiel durchgespielt!!\nGl\u00fcckwunsch, du hast das R\u00e4tsel auf Anhieb gel\u00f6st!\nDu hast "+tips+" Tip(s) abgerufen. \n\nDein Score ist "+score+" von maximal 80 Punkten.\n\nNachdem du das letzte R\u00e4tsel erfolgreich gel\u00f6st hast, gelangst du in einen Raum voller Sch\u00e4tze. Gold, Edelsteine und Diamanten zieren den Boden. Du beginnst z\u00fcgig deine Taschen mit den kostbaren Gegenst\u00e4nden vollzustopfen, sodass diese vor Reicht\u00fcmern nur so \u00fcberquellen. Immer mehr und mehr packst du in deine Beutel, bis du pl\u00f6tzlich ein dumpfes Ger\u00e4usch hinter dir h\u00f6rst. Als du dich erschreckt umdrehst, siehst du wie sich das Tor, durch das du die Schatzkammer betreten hast, sich beginnt zu schlieï¿½en. Zeitgleich beginnen die groï¿½en S\u00e4ulen in der Kammer zu br\u00f6ckeln und drohen sichtlich jeden Moment einzubrechen. \r\n" + 
+                					"Hastig packst du den mit Gold und Juwelen vollbepackten Beutel und sprintest zu der groï¿½en T\u00fcr, die den einzigen Ausweg aus diesem Raum zu verschlieï¿½en droht. Doch du bist zu sp\u00e4t. Direkt vor deiner Nase schlieï¿½t diese sich mit einem lauten Knarzen und du bist eingesperrt, umgeben von teuren Edelsteinen, in einer Kammer die in sich zusammenf\u00e4llt. Vergeblich trittst und h\u00e4mmerst du gegen das Tor, versuchst es irgendwie zu \u00f6ffnen, doch alle Bem\u00fchungen helfen nichts. \r\n" + 
+                					"Von der Decke fallen inzwischen immer gr\u00f6ï¿½ere Steine und du weiï¿½t, dass bald alles unter dem massiven Fels begraben sein wird, doch es gibt keinen Weg dem ganzen zu entkommen. Aber als pl\u00f6tzlich eine der groï¿½en S\u00e4ulen in sich zusammenbricht und unter lautem Krach auf den Boden aufschl\u00e4gt, entsteht dort ein Loch, das wohl in eine tiefergelegene Kammer f\u00fchrt, die von hieraus nicht zug\u00e4nglich war. Ohne lang zu z\u00f6gern packst du deine Sch\u00e4tze und springst in das, von Dunkelheit gef\u00fcllte, Loch, bevor einer der Felsen dich begr\u00e4bt.\r\n" + 
+                					"Aber Nanu ï¿½ Was ruft unser Protagonist nur w\u00e4hrend seinem Sturz in den Tod? ï¿½ï¿½DIE CREDITS!ï¿½. Ach ja, stimmt, die Credits! Die hab ich vor lauter Programmieren v\u00f6llig vergessen... Hier sind sie: Ein paar Bildelemente stammen von flaticons.com, und geschrieben wurde dieses tolle Spiel von Florian, Rintschen, Johannes und Emil im Rahmen eines Informatikprojekts der Q11 2018/19 am Gymnasium Wendelstein. Vielen dank f\u00fcrs spielen!!!\r\n" + 
                 					"");
                 			System.out.println(score);
                 		} else {
                 			score = score+10;
-                			storyta.setText("Du hast " +(counter+1)+" Versuche ben\u00f6tigt. \nWillkommen in Raum 5, Du hast das Spiel durchgespielt!!\nDu hast "+tips+" Tip(s) abgerufen.\n\nDein Score ist "+score+" von maximal 80 Punkten.\n\nNachdem du das letzte R\u00e4tsel erfolgreich gel\u00f6st hast, gelangst du in einen Raum voller Sch\u00e4tze. Gold, Edelsteine und Diamanten zieren den Boden. Du beginnst z\u00fcgig deine Taschen mit den kostbaren Gegenst\u00e4nden vollzustopfen, sodass diese vor Reicht\u00fcmern nur so \u00fcberquellen. Immer mehr und mehr packst du in deine Beutel, bis du pl\u00f6tzlich ein dumpfes Ger\u00e4usch hinter dir h\u00f6rst. Als du dich erschreckt umdrehst, siehst du wie sich das Tor, durch das du die Schatzkammer betreten hast, sich beginnt zu schließen. Zeitgleich beginnen die großen S\u00e4ulen in der Kammer zu br\u00f6ckeln und drohen sichtlich jeden Moment einzubrechen. \r\n" + 
-                					"Hastig packst du den mit Gold und Juwelen vollbepackten Beutel und sprintest zu der großen T\u00fcr, die den einzigen Ausweg aus diesem Raum zu verschließen droht. Doch du bist zu sp\u00e4t. Direkt vor deiner Nase schließt diese sich mit einem lauten Knarzen und du bist eingesperrt, umgeben von teuren Edelsteinen, in einer Kammer die in sich zusammenf\u00e4llt. Vergeblich trittst und h\u00e4mmerst du gegen das Tor, versuchst es irgendwie zu \u00f6ffnen, doch alle Bem\u00fchungen helfen nichts. \r\n" + 
-                				    "Von der Decke fallen inzwischen immer gr\u00f6ßere Steine und du weißt, dass bald alles unter dem massiven Fels begraben sein wird, doch es gibt keinen Weg dem ganzen zu entkommen. Aber als pl\u00f6tzlich eine der großen S\u00e4ulen in sich zusammenbricht und unter lautem Krach auf den Boden aufschl\u00e4gt, entsteht dort ein Loch, das wohl in eine tiefergelegene Kammer f\u00fchrt, die von hieraus nicht zug\u00e4nglich war. Ohne lang zu z\u00f6gern packst du deine Sch\u00e4tze und springst in das, von Dunkelheit gef\u00fcllte, Loch, bevor einer der Felsen dich begr\u00e4bt.\r\n" + 
-                				    "Aber Nanu – Was ruft unser Protagonist nur w\u00e4hrend seinem Sturz in den Tod? –„DIE CREDITS!“. Ach ja, stimmt, die Credits! Die hab ich vor lauter Programmieren v\u00f6llig vergessen... Hier sind sie: Ein paar Bildelemente stammen von flaticons.com, und geschrieben wurde dieses tolle Spiel von Florian, Rintschen, Johannes und Emil im Rahmen eines Informatikprojekts der Q11 2018/19 am Gymnasium Wendelstein. Vielen dank fürs spielen!!!\r\n" + 
+                			storyta.setText("Du hast " +(counter+1)+" Versuche ben\u00f6tigt. \nWillkommen in Raum 5, Du hast das Spiel durchgespielt!!\nDu hast "+tips+" Tip(s) abgerufen.\n\nDein Score ist "+score+" von maximal 80 Punkten.\n\nNachdem du das letzte R\u00e4tsel erfolgreich gel\u00f6st hast, gelangst du in einen Raum voller Sch\u00e4tze. Gold, Edelsteine und Diamanten zieren den Boden. Du beginnst z\u00fcgig deine Taschen mit den kostbaren Gegenst\u00e4nden vollzustopfen, sodass diese vor Reicht\u00fcmern nur so \u00fcberquellen. Immer mehr und mehr packst du in deine Beutel, bis du pl\u00f6tzlich ein dumpfes Ger\u00e4usch hinter dir h\u00f6rst. Als du dich erschreckt umdrehst, siehst du wie sich das Tor, durch das du die Schatzkammer betreten hast, sich beginnt zu schlieï¿½en. Zeitgleich beginnen die groï¿½en S\u00e4ulen in der Kammer zu br\u00f6ckeln und drohen sichtlich jeden Moment einzubrechen. \r\n" + 
+                					"Hastig packst du den mit Gold und Juwelen vollbepackten Beutel und sprintest zu der groï¿½en T\u00fcr, die den einzigen Ausweg aus diesem Raum zu verschlieï¿½en droht. Doch du bist zu sp\u00e4t. Direkt vor deiner Nase schlieï¿½t diese sich mit einem lauten Knarzen und du bist eingesperrt, umgeben von teuren Edelsteinen, in einer Kammer die in sich zusammenf\u00e4llt. Vergeblich trittst und h\u00e4mmerst du gegen das Tor, versuchst es irgendwie zu \u00f6ffnen, doch alle Bem\u00fchungen helfen nichts. \r\n" + 
+                				    "Von der Decke fallen inzwischen immer gr\u00f6ï¿½ere Steine und du weiï¿½t, dass bald alles unter dem massiven Fels begraben sein wird, doch es gibt keinen Weg dem ganzen zu entkommen. Aber als pl\u00f6tzlich eine der groï¿½en S\u00e4ulen in sich zusammenbricht und unter lautem Krach auf den Boden aufschl\u00e4gt, entsteht dort ein Loch, das wohl in eine tiefergelegene Kammer f\u00fchrt, die von hieraus nicht zug\u00e4nglich war. Ohne lang zu z\u00f6gern packst du deine Sch\u00e4tze und springst in das, von Dunkelheit gef\u00fcllte, Loch, bevor einer der Felsen dich begr\u00e4bt.\r\n" + 
+                				    "Aber Nanu ï¿½ Was ruft unser Protagonist nur w\u00e4hrend seinem Sturz in den Tod? ï¿½ï¿½DIE CREDITS!ï¿½. Ach ja, stimmt, die Credits! Die hab ich vor lauter Programmieren v\u00f6llig vergessen... Hier sind sie: Ein paar Bildelemente stammen von flaticons.com, und geschrieben wurde dieses tolle Spiel von Florian, Rintschen, Johannes und Emil im Rahmen eines Informatikprojekts der Q11 2018/19 am Gymnasium Wendelstein. Vielen dank fï¿½rs spielen!!!\r\n" + 
                 					"");
                 			System.out.println(score);
                 		}
@@ -476,12 +477,12 @@ public class Main extends Application {
                 		Label danke = new Label();
                 		danke.setLayoutX(645);
                         danke.setLayoutY(815);
-                        danke.setText("Vielen dank für's Spielen!");
+                        danke.setText("Vielen dank fï¿½r's Spielen!");
                         root.getChildren().add(danke);
                         danke.setFont(new Font("Calibri", 90));
            			} else {
            				story = storyta.getText();
-        				storyta.setText(story +"\n -----Deine Lösung war leider falsch. probiere es noch einmal!-----");
+        				storyta.setText(story +"\n -----Deine Lï¿½sung war leider falsch. probiere es noch einmal!-----");
            				tf1.clear();
         				tf2.clear();
         				counter ++;
