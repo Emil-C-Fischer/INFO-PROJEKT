@@ -14,7 +14,6 @@ import javafx.scene.text.Font;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 
-
 public class Main extends Application {
 
 	GRAPH graph1 = new GRAPH();
